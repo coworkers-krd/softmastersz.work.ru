@@ -1,0 +1,207 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/promo.less';
+
+
+.promo {
+	display: inline-block;
+	height: 95vh;
+	min-height: 700px;
+	max-height: 806px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+
+	@media(max-width: @screen-lg) and (min-width: @screen-sm) {
+		min-height: 650px;
+	}
+	@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+		min-height: 0px;
+		max-height: 1000px;
+	}
+
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-size: 4px;
+		top: 0;
+		left: 0;
+		background-image: url('/img/pattern_video_2.svg');
+		opacity: .25;
+	}
+
+	.container {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 100%;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 426px;
+			height: 200px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: right;
+			position: absolute;
+			right: 32px;
+			bottom: 0;
+			transform: translateY(39%);
+			background-image: url('/img/pattern.png');
+
+			@media(max-width: @screen-md) and (min-width: @screen-sm) {
+				width: 35%;
+				bottom: -7px;
+			}
+
+			@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+				width: 35%;
+				bottom: -14px;
+			}
+		}
+	}
+
+	&--product {
+		height: auto;
+		min-height: auto;
+		padding-bottom: 30px;
+		@media(max-width: @screen-lg) and (min-width: @screen-sm) {
+			min-height: auto;
+		}
+		&:after {
+			display: none;
+		}
+		.container {
+			position: relative;
+			left: auto;
+			transform: none;
+			&:after {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				background-color: @white-color;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 75%;
+				width: 190px;
+				height: 90px;
+				border-radius: 20px;
+				border-bottom-left-radius: 0;
+				bottom: 136px;
+				transform: none;
+				right: 0;
+				@media(max-width: @screen-md) and (min-width: @screen-sm) {
+					width: 160px;
+					height: 70px;
+					right: 30px;
+				}
+				@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+					width: 100px;
+					height: 50px;
+					right: 30px;
+					bottom: 100%;
+					display: none;
+				}
+			}
+		}
+	}
+
+	&--ilsar-ship {
+		background-image: url('/img/ilsar_ship_bgr.png');  
+		.container {
+			&:after {  
+				background-image: url('/img/logo_ilsar_ship.png');
+			}
+		}
+	}
+
+	&__text-box {
+		margin-top: 210px;
+
+		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+			margin-top: 130px;
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-weight: 900;
+		font-size: 90px;
+		line-height: 0.9;
+		color: @white-color;
+		position: relative;
+		padding-bottom: 25px;
+		margin-bottom: 25px;
+		display: inline-block;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 100%;
+			height: 3px;
+			background: linear-gradient( 90deg, rgb(35,124,229) 0%, rgb(255,0,62) 100%);
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+		@media(max-width: @screen-lg) and (min-width: @screen-sm) {
+			font-size: 72px;
+		}
+		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+			font-size: 32px;
+		}
+
+
+		&--product {
+			width: 80%;
+			font-size: 48px;
+			@media(max-width: @screen-lg) and (min-width: @screen-sm) {
+				font-size: 40px;
+			}
+			@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+				font-size: 32px;
+			}
+		}
+
+	}
+
+
+	&__text {
+		width: 75%;
+		color: @white-color;
+		line-height: 1.5;
+		font-size: 22px;
+
+		@media(max-width: @screen-lg) and (min-width: @screen-sm) {
+			font-size: 18px;
+			width: 60%;
+		}
+		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+			font-size: 14px;
+			width: 100%;
+		}
+	}
+	&__video-box {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		z-index: -1;
+		overflow: hidden;
+
+		video {
+			position: absolute;	
+			top: 50%;	
+			left: 50%;	
+			transform: translate(-50%,-50%);
+			width: 100%;
+			height: auto;
+		}
+	}
+}

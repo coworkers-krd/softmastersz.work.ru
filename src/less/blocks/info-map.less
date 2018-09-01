@@ -1,0 +1,407 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/info-map.less';
+
+
+.info-map {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	justify-content: center;
+	height: 800px;
+	background-color: #2b1c6f;
+	background-image: url('/img/map/net.svg');
+	background-size: 200%;
+	background-position: center;
+	z-index: 10;
+	margin-top: -20px;
+	overflow: hidden;
+	@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+		margin-top: 20px;
+		height: 600px;
+	}
+
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 300%;
+		height: 90px;
+		background-color: #fff;
+		position: absolute;
+		top: -5px;
+		right: 50%;
+		transform: skew(-60deg);
+		z-index: 9999;
+		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+			display: none;
+		}
+	}
+	&:after {
+		content: '';
+		display: inline-block;
+		width: 300%;
+		height: 90px;
+		background-color: #fff;
+		position: absolute;
+		bottom: -5px;
+		left: 50%;
+		transform: skew(-60deg);
+		z-index: 9999;
+		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+			display: none;
+		}
+	}
+	object {
+		width: 1920px;
+		margin-top: 50px;
+		height: 800px;
+		z-index: 10;
+	} 
+	&__mask {
+		z-index: 999;
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+	&__map-wrapper {
+		position: relative;
+		transform: scale(0.85);
+
+		@media(max-width: @screen-lg) and (min-width: @screen-md){
+			transform: scale(0.75);
+		}
+		@media(max-width: @screen-md) and (min-width: @screen-sm){
+			transform: scale(0.65);
+		}
+		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+			transform: scale(0.5);
+		}
+	}
+	&__dot {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		text-decoration: none;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		z-index: 999;
+		cursor: pointer;
+
+		&--d1 {
+			transform: translate(890%, -420%);
+		}
+		&--d2 {
+			transform: translate(540%, -1100%);
+		}
+		&--d3 {
+			transform: translate(-310%, -530%);
+		}
+		&--d4 {
+			transform: translate(10%, -620%);
+		}
+		&--d5 {
+			transform: translate(50%, -440%);
+		}
+		&--d6 {
+			transform: translate(460%, -170%);
+		}
+		&--d7 {
+			transform: translate(740%, -240%);
+		}
+		&--d8 {
+			transform: translate(1140%, -53%);
+		}
+		&--d9 {
+			transform: translate(80%, 150%);
+		}
+		&--d10 {
+			transform: translate(450%, 390%);
+		}
+		&--d11 {
+			transform: translate(-770%, -190%);
+		}
+		&--d12 {
+			transform: translate(-250%, 200%);
+		}
+		&--d13 {
+			transform: translate(-390%, 100%);
+		}
+		&--d14 {
+			transform: translate(-1680%, 390%);
+		}
+
+	}
+	&__text {
+		font-size: 14px;
+		padding: 30px 10px;
+		border-radius: 10px;
+		border-bottom-left-radius: 0;
+		position: absolute;
+		background-color: rgba(255,255,255,.8);
+		color: @blue-color;
+		width: 260px;
+		bottom: 100%;
+		left: 20px;
+		display: none;
+		cursor: default;
+	}
+	&__close {
+		width: 35px;
+		height: 35px;
+		background-image: url('/img/close_icon.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		z-index: 999;
+		cursor: pointer; 
+	}
+	.container {
+		position: absolute;
+		height: 100%;
+	}
+	&__box {
+		position: absolute;
+		left: 0;
+		top: 120px;
+		z-index: 20;
+
+		@media(max-width: @screen-lg) {
+			left: 30px;
+		}
+		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+			top: 20px;
+		}
+	}
+	&__box h3 {
+		color: @white-color;
+		font-size: 30px;
+		font-weight: 900;
+		@media(max-width: @screen-lg) and (min-width: @screen-sm) {
+			font-size: 24px;
+		}
+		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+			font-size: 20px;
+		}
+	}
+	&__box p {
+		color: @white-color;
+		font-size: 18px;
+		font-weight: 400;
+		margin-top: 10px;
+		@media(max-width: @screen-lg) and (min-width: @screen-sm) {
+			font-size: 16px;
+		}
+		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+			font-size: 14px;
+		}
+	}
+	&__box span {
+		background-image: url('/img/info_icon.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		margin: 0 5px;
+		position: relative;
+		top: 6px;
+		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+			width: 15px;
+			height: 15px;
+		}
+	}
+	&__nav {
+		border-radius: 10px;
+		background-color: rgba(118, 74, 255,.5);
+		position: absolute;
+		bottom: 130px;
+		right: 0;
+		padding: 13px;
+		z-index: 9999;
+		@media(max-width: @screen-lg) and (min-width: @screen-sm){
+			right: 30px;
+			bottom: 110px;
+		}
+		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
+			bottom: 20px;
+			right: 30px;
+			padding: 0 15px;
+		}
+	}
+	&__ship {
+		display: inline-block;
+		position: absolute;
+		width: 160px;
+		height: 130px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&__btn {
+		display: block;
+		font-size: 16px;
+		color: @white-color;
+		text-decoration: none;
+		line-height: 50px;
+		padding-right: 50px;
+		position: relative;
+		transition: 0.3s;
+		cursor: pointer;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 33px;
+			height: 33px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		&--plus:after {
+			background-image: url('/img/plus_icon.png');
+		}
+		&--minus:after {
+			background-image: url('/img/minus_icon.png');
+		}
+
+		&:hover {
+			opacity: 0.6;
+			transition: 0.3s;
+		}
+	}
+	&__ship-1 {
+		left: 50%;
+		top: 50%;
+		transform: translate(-300%, 200%);
+		background-image: url('/img/map/ship_1.svg');
+	}
+	&__ship-2 {
+		left: 50%;
+		top: 50%;
+		transform: translate(-400%, 20%);
+		background-image: url('/img/map/ship_1.svg');
+		z-index: 999;
+	}
+	&__ship-3 {
+		background-image: url('/img/map/ship_3.svg');
+		z-index: -1;
+		left: 50%;
+		top: 50%;
+		transform: translate(190%, -240%);
+	}
+	&__ship-4 {
+		background-image: url('/img/map/ship_2.svg');
+		left: 50%;
+		top: 50%;
+		transform: translate(40%, -320%);
+		z-index: -1;
+	}
+	&__ship-5 {
+		background-image: url('/img/map/ship_1.svg');
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+@keyframes ship_1_way {
+	0% { 
+		background-image: url('/img/map/ship_1.svg'); 
+		transform: translate(-530%, 380%);
+	}
+	49% { 
+		background-image: url('/img/map/ship_1.svg'); 
+		transform: translate(-300%, 200%);
+	}
+	50% { 
+		background-image: url('/img/map/ship_2.svg'); 
+		transform: translate(-300%, 200%);
+	}
+	100% { 
+		background-image: url('/img/map/ship_2.svg'); 
+		transform: translate(-530%, 380%);
+	}
+}
+.info-map__ship-1 {
+	animation: ship_1_way 19s infinite;
+}
+@keyframes ship_2_way {
+	0% { 
+		background-image: url('/img/map/ship_1.svg');
+		transform: translate(-900%, 440%);
+	}
+	49% { 
+		background-image: url('/img/map/ship_1.svg');
+		transform: translate(-400%, 20%);
+	}
+	50% { 
+		background-image: url('/img/map/ship_3.svg');
+		transform: translate(-390%, 10%);
+	}
+	100% { 
+		background-image: url('/img/map/ship_3.svg');
+		transform: translate(-900%, -380%);
+	}
+}
+.info-map__ship-2 {
+	animation: ship_2_way 28s infinite;
+}
+@keyframes ship_3_way {
+	0% { 
+		background-image: url('/img/map/ship_3.svg');
+		transform: translate(990%, 380%);
+	}
+	49% { 
+		background-image: url('/img/map/ship_3.svg');
+		transform: translate(190%, -240%);
+	}
+	50% { 
+		background-image: url('/img/map/ship_1.svg');
+		transform: translate(150%, -260%);
+	}
+	100% { 
+		background-image: url('/img/map/ship_1.svg');
+		transform: translate(990%, -880%);
+	}
+}
+.info-map__ship-3 {
+	animation: ship_3_way 25s infinite;
+}
+@keyframes ship_4_way {
+	0% { 
+		background-image: url('/img/map/ship_2.svg');
+		transform: translate(600%, -770%);
+	}
+	49% { 
+		background-image: url('/img/map/ship_2.svg');
+		transform: translate(40%, -320%);
+	}
+	50% { 
+		background-image: url('/img/map/ship_1.svg');
+		transform: translate(40%, -320%);
+	}
+	100% { 
+		background-image: url('/img/map/ship_1.svg');
+		transform: translate(600%, -770%);
+	}
+}
+.info-map__ship-4 {
+	animation: ship_4_way 16s infinite;
+}
+@keyframes ship_5_way {
+	0% { 
+		transform: translate(-290%, 370%);
+	}
+	100% { 
+		transform: translate(850%, -430%);
+	}
+}
+.info-map__ship-5 {
+	animation: ship_5_way 25s infinite;
+}
