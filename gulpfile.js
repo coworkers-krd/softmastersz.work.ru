@@ -189,6 +189,7 @@ gulp.task('js', function () {
       dirs.source + '/js/jquery-ui.js',
       dirs.source + '/js/jquery-migrate-1.4.1.min.js',
       dirs.source + '/js/jquery.maskedinput.min.js',
+      // dirs.source + '/js/jquery.ui.touch-punch.min.js',
       dirs.source + '/js/script.js',
       ])
   .pipe(plumber({ errorHandler: onError }))
