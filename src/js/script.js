@@ -138,13 +138,14 @@ $(document).ready(function(){
 	jQuery(document).scroll(markerShow);
 
 	function mainVideo() {
-		var windowsWidth = jQuery(window).width();
-		var windowsHeight = jQuery(window).height();
-		var screenRes = windowsWidth / windowsHeight;
-		console.log(screenRes);
-		if(screenRes > 2.24) {
+		var promoWidth = jQuery('.promo').width();
+		var promoHeight = jQuery('.promo').height();
+		var videoWidth = jQuery('#mainVideo').width();
+		var videoHeight = jQuery('#mainVideo').height();
+
+		if(promoWidth > videoWidth) {
 			jQuery('#mainVideo').css({'width':'100%', 'height':'auto'});
-		} if(screenRes < 2.24) {
+		} if(promoHeight > videoHeight) {
 			jQuery('#mainVideo').css({'width':'auto', 'height':'100%'});
 		}
 	}
@@ -186,7 +187,7 @@ $(document).ready(function(){
 		}, {
 			iconLayout: 'default#image', 
 			iconImageHref: 'http://sydphoep.beget.tech/img/map/geo-tag.gif',
-			iconImageSize: [36, 48],
+			iconImageSize: [45, 65],
 			iconImageOffset: [-20, -55]
 		}),
 
