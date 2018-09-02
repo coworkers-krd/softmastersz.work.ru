@@ -172,4 +172,26 @@ $(document).ready(function(){
 	// jQuery(document).scroll(menuHideShow);
 	jQuery(window).resize(menuHideShow);
 
+
+	ymaps.ready(initMap);
+	function initMap(){ 
+		var myMap = new ymaps.Map("contactMap", {            
+			center: [59.387921, 28.611306],            
+			zoom: 16,
+		});
+
+		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+			hintContent: 'Юридический и физический адреса',
+			balloonContent: 'Юридический и физический адреса',
+		}, {
+			iconLayout: 'default#image', 
+			iconImageHref: 'http://sydphoep.beget.tech/img/map/geo-tag.gif',
+			iconImageSize: [36, 48],
+			iconImageOffset: [-20, -55]
+		}),
+
+		myMap.behaviors.disable('scrollZoom');
+		myMap.geoObjects.add(myPlacemark)
+	}
+
 });
