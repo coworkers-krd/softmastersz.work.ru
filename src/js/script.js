@@ -64,7 +64,6 @@ $(document).ready(function(){
 		var windowsWidth = jQuery(window).width();
 		var windowsHeight = jQuery(window).height();
 		var screenRes = windowsWidth / windowsHeight;
-		console.log(screenRes);
 		if(screenRes > 1.23) {
 			jQuery('#mainVideo').css({'width':'100%', 'height':'auto'});
 		} if(screenRes < 1.23) {
@@ -125,17 +124,16 @@ $(document).ready(function(){
 	});
 	$('#imapRussiaWrapper').draggable();
 
-	function markerShow() {
+	function productParalax() {
 		var scroll = jQuery(window).scrollTop();
-		var objects = jQuery('.objects').offset().top;
-		if(scroll > objects) {
-			jQuery('.objects__marker').each(function(){
-				jQuery(this).fadeIn(200);
-			});
-		}
+		var product = jQuery('.product').offset().top;
+		var productHeight = jQuery('.product').height();
+		var counter = ((scroll - product + productHeight) / scroll * 100 ) - 12;
+		console.log(counter);
+		jQuery('.product__paralax').css('transform','translateY(-'+ counter +'%)');
 	}
-	jQuery(document).ready(markerShow);
-	jQuery(document).scroll(markerShow);
+	jQuery(document).ready(productParalax);
+	jQuery(document).scroll(productParalax);
 
 	function mainVideo() {
 		var promoWidth = jQuery('.promo').width();
