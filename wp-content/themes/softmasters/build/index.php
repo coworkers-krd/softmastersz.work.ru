@@ -4,177 +4,658 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="/css/style.css">
-	<title>Кремлевский стан - Главная</title> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css?v=<?php echo date(U); ?>">
+	<title>SoftMasters - Главная</title>
 </head>
 <body>
+	<?php include ($_SERVER['DOCUMENT_ROOT'] . '/modules/header.php'); ?>
 
-	<header class="page-header">
+	<section class="promo">
 		<div class="container">
-			<a href="#" class="logo">
-				<img src="/img/logo_final.png" alt="" class="logo__img">
-			</a>
-
-			<div class="social">
-				<a href="#" class="social__item social__item--vk"></a>
-				<a href="#" class="social__item social__item--mail"></a>
-				<a href="#" class="social__item social__item--fb"></a>
-				<a href="#" class="social__item social__item--rss"></a>
-			</div>
-
-			<div class="search">
-				<input type="text" class="search__input" placeholder="Найти...">
-				<a href="#" class="search__btn"></a>
-			</div>
-
-			<div class="search__btn-header"></div>
-
-			<div class="burger__wrapper">
-				<div class="burger"></div>
+			<div class="promo__text-box">
+				<h1 class="promo__title">Умные <br>it решения <br>в логистике</h1>
+				<p class="promo__text">разрабатываем  и внедряем  собственные программные продукты для нужд крупных промышленных стивидорных, транспортных, добывающих предприятий. </p>
 			</div>
 		</div>
-	</header>
 
-	<div class="main">
-		<div class="container">
-			<div class="sidebar">
-				<ul class="menu">
-					<li class="menu__item"><a href="#" class="menu__link">Чистые бойцы реки Чусовой</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Журнал "Алмазная спичка"</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Книги, издания</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Наши проекты</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-				</ul>
+		<div class="promo__video-box">
+			<video id="mainVideo" preload="auto" muted playsinline autoplay="autoplay" loop="loop"><source src="http://sydphoep.beget.tech/img/video/video_bgr_main.webm" type="video/webm"><source src="http://sydphoep.beget.tech/img/video/video_bgr_main.mp4" type="video/mp4"></video>
 			</div>
+		</section>
 
-			<div class="main__box">
+		<section class="prefs" id="about">
+			<div class="container">
+				<h2 class="section-title">О  компании</h2>
 
-				<div class="content">
-					<div class="content__img-wrapper">
-						<img src="http://www.fillmurray.com/960/300" alt="" class="content__img">
+				<div class="bullit__wrapper">
+					<div class="bullit">
+						<div class="bullit__img-wrapper"><img src="/img/bullit_1.png" alt=""></div>
+						<p class="bullit__text">Работаем  с 2008 г.</p>
+					</div>
+					<div class="bullit">
+						<div class="bullit__img-wrapper"><img src="/img/bullit_2.png" alt=""></div>
+						<p class="bullit__text">Гарантируем высокий уровень надёжности и безопасности наших систем</p>
+					</div>
+					<div class="bullit">
+						<div class="bullit__img-wrapper"><img src="/img/bullit_3.png" alt=""></div>
+						<p class="bullit__text">Адаптируем наши продукты под любые требования заказчика</p>
+					</div>
+					<div class="bullit">
+						<div class="bullit__img-wrapper"><img src="/img/bullit_4.png" alt=""></div>
+						<p class="bullit__text">Наши системы позволяют полностью контролировать основные аспекты бизнеса предприятий</p>
+					</div>
+				</div>
+
+				<div class="prefs__box">
+					<div class="prefs__column">
+						<p>Нами наработан большой опыт по стыковке ИТ-систем для ведения бизнеса, нашей разработки (ILSARv3, ILSARShip, ILSAR RW, ILSARScale, ILSAREtranConnector, ILSARMobileMonitor, ILSAREcoMonitor) и различных внешних/смежных ИТ- и АСУТП-систем, установленных на промышленных предприятиях:</p>
+						<ul>
+							<li>производители/разработчики/вендоры: 1С, SAP, ORACLE, SIEMENS SIMATIC,АльфаПрибор, НИЦФОРС, ISS, Авитек-Плюс, АСИ, СТК;</li>
+							<li>системы считывания номеров вагонов (Бастион-Состав, Транзит-инспектор от ISS, АСКИН);</li>
+							<li>системы взвешивания ЖД-вагонов (ВТВ-Др, Триада, ВД-30, WeighTer, Тензо-М, Веста);</li>
+							<li>АСОУП ИВЦ РЖД - позволяет определять местоположения вагонов на сети железных дорог.</li>
+							<li>АС ЭТРАН ОАО РЖД (АСУ-АСУ интерфейс, проект ILSAREtranConnector) с применением ЭЦП, что позволяет исключить бумажные документы при оформлении перевозочных документов при работе с РЖД.</li>
+						</ul>
 					</div>
 
-					<h1 class="section-title">Об издательстве</h1>
-					<p class="content__text">А также тщательные исследования конкурентов будут обнародованы. Имеется спорная точка зрения, гласящая примерно следующее: сторонники тоталитаризма в науке представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть представлены в исключительно положительном свете. Многие известные личности освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, объективно рассмотрены соответствующими инстанциями. Принимая во внимание показатели успешности, высококачественный прототип будущего проекта является качественно новой ступенью переосмысления внешнеэкономических политик. Сделанные на базе интернет-аналитики выводы, превозмогая сложившуюся непростую экономическую ситуацию, функционально разнесены на независимые элементы. С другой стороны, синтетическое тестирование не дает нам иного выбора, кроме определения инновационных методов управления процессами. Вот вам яркий пример современных тенденций - синтетическое тестирование способствует подготовке и реализации экономической целесообразности принимаемых решений. Прежде всего, высокое качество позиционных исследований представляет собой интересный эксперимент проверки экономической целесообразности принимаемых решений.</p>
+					<div class="prefs__column">
+						<p>В арсенале Софтмастерс есть разработки по программному обеспечению на платформах Google Android, Apple iOS. Данные разработки позволяют реализовать системы принятия решений для менеджмента компаний на основе получения основных производственных показателей из ИЛС ILSAR, ИЛС ILSAR RW на переносные коммуникаторы/планшеты (iPhone, iPad и аналогичные), вести учет при работе с (например – приёмка/сдача вагонов) через ручные терминалы сбора данных типа Motorolla/Symbol, защищенные планшеты типа Torex Pad.</p>
+						<p>Накопленный опыт позволяет нашей компании дорабатывать наши ИТ-системы под любые требования заказчика в прогнозируемые сроки.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="info-map">
+			<div class="container">
+				<div class="info-map__box">
+					<h3>Карта взаимодействия <br>продуктов ILSAR</h3>
+					<p>кликните <span></span> для подробной информации </p>
 				</div>
 
-				<div class="link">
-					<h2 class="section-title">Последние материалы</h2>
+				<div class="info-map__nav">
+					<div onmousedown="return false" onselectstart="return false" class="info-map__btn info-map__btn--plus">приблизить</div>
+					<div onmousedown="return false" onselectstart="return false" class="info-map__btn info-map__btn--minus">уменьшить</div>
+				</div>
+			</div>
 
-					<div class="link__wrapper">
-						<article class="link__item">
-							<h2 class="link__title">Статья 1</h2>
-							<div class="link__img-wrapper">
-								<img src="http://www.placecage.com/gif/500/500" alt="" class="link__img">
-							</div>
-							<p class="link__text">Также как дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании распределения внутренних резервов и ресурсов.</p>
-							<a href="#" class="link__btn">Читать<span> полностью</span></a>
-						</article>
+			<div class="info-map__map-wrapper draggable" id="imapWrapper">
+				<div class="info-map__mask"></div>
+				<object data="/img/map/terminal.svg" type="image/svg+xml" id="imap" width="100%" height="auto"></object>
 
-						<article class="link__item">
-							<h2 class="link__title">Статья 1</h2>
-							<div class="link__img-wrapper">
-								<img src="http://www.placecage.com/gif/500/500" alt="" class="link__img">
-							</div>
-							<p class="link__text">Также как дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании распределения внутренних резервов и ресурсов.</p>
-							<a href="#" class="link__btn">Читать<span> полностью</span></a>
-						</article>
+				<div class="info-map__dot info-map__dot--d1">
+					<p class="info-map__text">Формирование накладных в ЭТРАН.<span class="info-map__close"></span></p>
+				</div>
+				<div class="info-map__dot info-map__dot--d2">
+					<p class="info-map__text">Передача данных об отгрузках в адрес порта.<span class="info-map__close"></span></p>
+				</div>
+				<div class="info-map__dot info-map__dot--d3">
+					<p class="info-map__text">Получение информации о пунктах назначения порожних вагонов. Данные об операторе.<span class="info-map__close"></span></p>
+				</div>
+				<div class="info-map__dot info-map__dot--d4">
+					<p class="info-map__text">Получение данных о количестве и характере груза.Передача данных о текущем статусе груза.<span class="info-map__close"></span></p>
+				</div>
+				<div class="info-map__dot info-map__dot--d5">
+					<p class="info-map__text">Информация об отправках в адрес порта. Формирование электронных накладных.<span class="info-map__close"></span></p>
+				</div>
+				<div class="info-map__dot info-map__dot--d6">
+					<p class="info-map__text">Передача таможенных документов.<span class="info-map__close"></span></p>
+				</div>
+				<div class="info-map__dot info-map__dot--d7">
+					<p class="info-map__text">Данные о текущем положении вагонов. Данные о натурных листах поезда.<span class="info-map__close"></span></p>
+				</div>
+				<div class="info-map__dot info-map__dot--d8">
+					<p class="info-map__text">Текущее положение вагонов.<span class="info-map__close"></span></p>
+				</div>
+				<div class="info-map__dot info-map__dot--d9">
+					<p class="info-map__text">Прогноз погоды, уровень воды.<span class="info-map__close"></span></p>
+				</div>
+				<div class="info-map__dot info-map__dot--d10">
+					<p class="info-map__text">Телефонограммы о подаче, уборке. Задание на сортировку, выработку вагонов.<span class="info-map__close"></span></p>
+				</div>
+				<div class="info-map__dot info-map__dot--d11">
+					<p class="info-map__text">Обмен данными с корпоративной ERP системой, прием, списание груза.<span class="info-map__close"></span></p>
+				</div>
+				<div class="info-map__dot info-map__dot--d12">
+					<p class="info-map__text">Централизованное распределение информации между районами. Единое информационное пространство.<span class="info-map__close"></span></p>
+				</div>
+				<div class="info-map__dot info-map__dot--d13">
+					<p class="info-map__text">Работа всех районов порта в одном информационном пространстве.<span class="info-map__close"></span></p>
+				</div>
 
-						<article class="link__item">
-							<h2 class="link__title">Статья 1</h2>
-							<div class="link__img-wrapper">
-								<img src="http://www.placecage.com/gif/500/500" alt="" class="link__img">
-							</div>
-							<p class="link__text">Также как дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании распределения внутренних резервов и ресурсов.</p>
-							<a href="#" class="link__btn">Читать<span> полностью</span></a>
-						</article>
+				<div class="info-map__dot info-map__dot--d14">
+					<p class="info-map__text">При наличии системы СЦБ. Данные о текущем положении вагонов передаются автоматически.При наличии ЖД весов и систем считывания номеров данные передаются в систему.<span class="info-map__close"></span></p>
+				</div>
 
-						<article class="link__item">
-							<h2 class="link__title">Статья 1</h2>
-							<div class="link__img-wrapper">
-								<img src="http://www.placecage.com/gif/500/500" alt="" class="link__img">
+				<div class="info-map__ship info-map__ship-1"></div>
+				<div class="info-map__ship info-map__ship-2"></div>
+				<div class="info-map__ship info-map__ship-3"></div>
+				<div class="info-map__ship info-map__ship-4"></div>
+				<div class="info-map__ship info-map__ship-5"></div>
+			</div>
+
+
+		</section>
+
+		<section class="history" id="history">
+			<div class="container">
+				<h2 class="section-title">История компании</h2>
+				<div class="history__box">
+					<div class="history__btn history__btn--next"></div>
+					<div class="history__btn history__btn--prev"></div>
+					<div class="history__wrapper">
+
+						<div class="history__case">
+							<h3 class="history__year"><span class="history__number">2008</span> год</h3>
+							<div class="history__content">
+								<ul>
+									<li>
+										<h3>Создана система ILSAR </h3>
+										<p>Разработка и запуск информационно-логистической системы ILSAR для угольного терминала</p>
+									</li>
+								</ul>
 							</div>
-							<p class="link__text">Также как дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании распределения внутренних резервов и ресурсов.</p>
-							<a href="#" class="link__btn">Читать<span> полностью</span></a>
-						</article>
+						</div>
+
+						<div class="history__case">
+							<h3 class="history__year"><span class="history__number">2011</span> год</h3>
+							<div class="history__content">
+								<ul>
+									<li>
+										<h3>ILSAR Mobile Monitor</h3>
+										<p>разработка и запуск системы принятия решения для руководящего персонала на основе мобильных устройств (коммуникаторы, планшеты) на базе ОС iOS (iPhone, iPad) Android (HTC Desire HD, ASUS Eee Pad Transformer), системы вывода производственных показателей на мобильные устройства <b>(система ILSARMobileMonitor)</b></p>
+									</li>
+									<li>
+										<h3>Система ILSARMobile</h3>
+										<p>разработка и запуск системы сдачи/приемки вагонов на ручных переносных терминалах сбора данных <b>(система ILSARMobile)</b></p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="history__case">
+							<h3 class="history__year"><span class="history__number">2012</span> год</h3>
+							<div class="history__content">
+								<ul>
+									<li>
+										<h3>ILSAR Mobile Monitor</h3>
+										<p>адаптация и запуск «Системы учёта отгрузок навалочных грузов с разрезов и шахт горнодобывающих предприятий» <b>(проект – Информационная система автоматизированного учета отгрузок ILSARShip)</b></p>
+									</li>
+									<li>
+										<h3>Создана система ILSAR Mobile Monitor</h3>
+										<p>Разработка и запуск системы принятия решения для руководящего персонала на основе мобильных устройств (коммуникаторы, планшеты) на базе ОС iOS (iPhone, iPad) Android (HTC Desire HD, ASUS Eee Pad Transformer), системы вывода производственных показателей на мобильные устройства</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="history__case">
+							<h3 class="history__year"><span class="history__number">2015</span> год</h3>
+							<div class="history__content">
+								<ul>
+									<li>
+										<h3>ILSAR V3 (3 версия)</h3>
+										<p>разработка и запуск информационно-логистической системы (ИЛС) ILSARv3 для автоматизации и учета стивидорной деятельности </p>
+									</li>
+									<li>
+										<h3>ILSAR Ship + ILSAR</h3>
+										<p>разработка и запуск Единой Информационной Логистической Системы для холдинговой компании (создание единой ИЛС для анализа и планирования производственной деятельности на основе объединения данных из ИСАУО ILSARShip и ИЛС ILSAR)</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="history__case">
+							<h3 class="history__year"><span class="history__number">2016</span> год</h3>
+							<div class="history__content">
+								<ul>
+									<li>
+										<h3>АРМ ILSAR Scale</h3>
+										<p>разработка и запуск Единого Автоматизированного Рабочего Места Весовщика АРМ ILSARScale для всех весовых пунктов (ЖД-/Авто- отгрузки), точек взвешивания, для унификации всего используемого оборудования (системы взвешивания, системы оптического считывания номеров вагонов и автомобилей, системы управления светофорами, RFID-считывателями и т.д.)</p>
+									</li>
+									<li>
+										<h3>ILSAR EtranConnector</h3>
+										<p>разработка и запуск сервиса прямого обмена данными с АС ЭТРАН РЖД в режиме АСУ-АСУ с ЭЦП (проект ILSAREtranConnector) на нескольких площадках с установленными информационными системами учета отгрузок ILSARShip</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="history__case">
+							<h3 class="history__year"><span class="history__number">2017</span> год</h3>
+							<div class="history__content">
+								<ul>
+									<li>
+										<h3>ILSAR EtranConnector+ILSAR Ship</h3>
+										<p>разработка и запуск сервиса прямого обмена данными с АС ЭТРАН РЖД в режиме АСУ-АСУ с ЭЦП (проект ILSAREtranConnector) на нескольких стивидорных площадках установленными информационно-логистическими системами ILSAR по автоматизации стивидорной деятельности</p>
+									</li>
+									<li>
+										<h3>ILSAR RW</h3>
+										<p>разработка и запуск информационно-логистической системы ILSAR RW по автоматизации и учету деятельности Погрузочно-Транспортного Управления.</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="history__case active">
+							<h3 class="history__year"><span class="history__number">2018</span> год</h3>
+							<div class="history__content">
+								<ul>
+									<li>
+										<h3>ILSAR EcoMonitor</h3>
+										<p>разработка автоматизированной информационной системы производственного экологического контроля воздействия производственной деятельности предприятия на окружающую среду ILSAREcoMonitor</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+
 
 					</div>
-
-				</div>
-
-				<div class="feedback">
-					<h2 class="section-title">Напишите нам!</h2>
-					<div class="feedback__map"></div>
-					<form action="" class="feedback__form">
-						<input type="text" class="feedback__input">
-						<input type="text" class="feedback__input">
-						<input type="text" class="feedback__input">
-
-						<label for="">
-							
-							<p class="feedback__text">
-								<input type="checkbox">
-								Я прочитал и согласен с политикой хранения и обработки персональных данных
-							</p>
-						</label>
-
-						<textarea name="" id="" cols="30" rows="10" class="feedback__input feedback__input--big"></textarea>
-
-						<input type="submit" class="feedback__btn" value="Отправить">
-					</form>
 				</div>
 			</div>
-		</div>
-	</div>
+		</section>
 
-	<footer class="page-footer">
-		<div class="container">
-			<div class="link-cloud">
-				<a href="#" class="link-cloud__item link-cloud__item--bold">Чистые бойцы реки Чусовой</a>
-				<a href="#" class="link-cloud__item">Карта</a>
-				<a href="#" class="link-cloud__item">Подробности</a>
-				<a href="#" class="link-cloud__item">2017</a>
-				<a href="#" class="link-cloud__item">2018</a>
+		<section class="product" id="product">
+			<div class="product__paralax"></div>
+			<div class="container">
+
+				<h2 class="section-title section-title--white">Наши продукты</h2>
+
+				<div class="product__item">
+					<img src="/img/logo_v3_ilsar.png" alt="" class="product__logo">
+					<p class="product__text">ILSAR – информационно логистическая система (ИЛС)</p>
+					<div class="product__btn-wrapper">
+						<a href="#" class="product__btn">подробнее</a>
+					</div>
+				</div>
+
+				<div class="product__item">
+					<img src="/img/logo_ilsar_ship.png" alt="" class="product__logo">
+					<p class="product__text"><b>ILSAR Ship</b> – cистема  учёта отгрузок навалочных грузов с разрезов и шахт горнодобывающих предприятий</p>
+					<div class="product__btn-wrapper">
+						<a href="/ilsar_ship/" class="product__btn">подробнее</a>
+					</div>
+				</div>
+
+				<div class="product__item">
+					<img src="/img/logo_ilsar_route.png" alt="" class="product__logo">
+					<p class="product__text"><b>ILSAR Route</b> – ИЛС ILSAR для предприятий промышленного железнодорожного транспорта (ППЖТ) </p>
+					<div class="product__btn-wrapper">
+						<a href="/ilsar_ship/" class="product__btn">подробнее</a>
+					</div>
+				</div>
+
+				<div class="product__item">
+					<img src="/img/logo_ilsar_eco_monitor.png" alt="" class="product__logo">
+					<p class="product__text"><b>ILSAR Eco Monitor</b> – автоматизированная информационная система производственного экологического контроля воздействия производственной деятельности предприятия на окружающую среду ж.-д., и автотранспорта, судов.</p>
+					<div class="product__btn-wrapper">
+						<a href="/ilsar_ship/" class="product__btn">подробнее</a>
+					</div>
+				</div>
+
+				<div class="product__item">
+					<img src="/img/logo_ilsar_scale.png" alt="" class="product__logo">
+					<p class="product__text"><b>ILSAR Scale</b> – единое Автоматизированное Рабочее Место Весовщика АРМ </p>
+					<div class="product__btn-wrapper">
+						<a href="/ilsar_ship/" class="product__btn">подробнее</a>
+					</div>
+				</div>
+
+
+				<div class="product__item">
+					<img src="/img/logo_ilsar_rw.png" alt="" class="product__logo">
+					<p class="product__text"><b>ILSAR RW</b> – информационно-логистическая  система по автоматизации и учету деятельности погрузочно-транспортного управления</p>
+					<div class="product__btn-wrapper">
+						<a href="/ilsar_ship/" class="product__btn">подробнее</a>
+					</div>
+				</div>
+
+				<div class="product__item">
+					<img src="/img/logo_ilsar_mobile_monitor.png" alt="" class="product__logo">
+					<p class="product__text"><b>ILSAR Mobile Monitor</b> – система вывода производственных показателей на мобильные устройства</p>
+					<div class="product__btn-wrapper">
+						<a href="/ilsar_ship/" class="product__btn">подробнее</a>
+					</div>
+				</div>
+
+				<div class="product__item">
+					<img src="/img/logo_ilsar_mobile.png" alt="" class="product__logo">
+					<p class="product__text"><b>ILSAR Mobile</b> – система сдачи/приемки вагонов на ручных переносных терминалах сбора данных</p>
+					<div class="product__btn-wrapper">
+						<a href="/ilsar_ship/" class="product__btn">подробнее</a>
+					</div>
+				</div>
+
+				<div class="product__item">
+					<img src="/img/logo_ilsar_etran_connector.png" alt="" class="product__logo">
+					<p class="product__text"><b>ILSAR EtranConnector</b> – сервис прямого обмена данными с АС ЭТРАН РЖД в режиме АСУ-АСУ с ЭЦП</p>
+					<div class="product__btn-wrapper">
+						<a href="/ilsar_ship/" class="product__btn">подробнее</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="partner">
+			<div class="container">
+				<h2 class="section-title">Партнеры</h2>
+
+				<div class="partner__item">
+					<div class="partner__logo-wrapper">
+						<img src="/img/ASC_logo_1.png" alt="" class="partner__logo">
+					</div>
+					<div class="partner__text-wrapper">
+						<h3 class="partner__title">«Автоматизированные <br>Системы и Комплексы» <span>(Екатеринбург)</span></h3>
+						<p class="partner__text">партнёр по интеграции ИЛС ILSAR, ILSAR RW с системами МПЦ-СЦБ и разработчик и внедренец МПЦ-СЦБ АСК–управлением стрелочными переводами и системой централизованной безопасности на подъездных путях необщего пользования предприятий промышленного железнодорожного транспорта, с функциями слежения за перемещениями транспортных средств в режиме реального времени, на основе решений SIEMENS SIMATIC, системы счета осей АСК. Является поставщиком решений по автоматизации для перегрузочного оборудования и КИПиА общепромышленного назначения.</p>
+					</div>
+				</div>
+
+				<div class="partner__item">
+					<div class="partner__logo-wrapper">
+						<img src="/img/sgm_logo.png" alt="" class="partner__logo">
+					</div>
+					<div class="partner__text-wrapper">
+						<h3 class="partner__title">«Специализация, Гениальность и Мастерство» <br>- СГМ <span>(Санкт-Петербург)</span></h3>
+						<p class="partner__text">Разработка систем АСУ ТП перегрузочного оборудования (сыпучие грузы) и контроля инженерных, технологических систем промышленных предприятий (газ, электроэнергия, вода, тепло и т.д.), партнер по интеграции.</p>
+					</div>
+				</div>
+
+				<div class="partner__item">
+					<div class="partner__logo-wrapper">
+						<img src="/img/iss_logo.png" alt="" class="partner__logo">
+					</div>
+					<div class="partner__text-wrapper">
+						<h3 class="partner__title">«Интеллектуальные Системы Безопасности» <br>- ISS <span>(Москва)</span></h3>
+						<p class="partner__text">Разработка систем интеллектуального машинного зрения, системы распознавания номеров жд-вагонов и автомобилей.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="objects">
+			<div class="container container--top">
+				<div class="objects__box">
+					<h3>Карта объектов</h3>
+				</div>
 			</div>
 
-			<div class="link-cloud">
-				<a href="#" class="link-cloud__item link-cloud__item--bold">Журнал “Алмазная спичка”</a>
-				<a href="#" class="link-cloud__item">№4 Август2017</a>
-				<a href="#" class="link-cloud__item">№3 Июль 2017</a>
+			<div class="container container--bottom">
+				<div class="objects__nav">
+					<div onmousedown="return false" onselectstart="return false" class="objects__btn objects__btn--plus">приблизить</div>
+					<div onmousedown="return false" onselectstart="return false" class="objects__btn objects__btn--minus">уменьшить</div>
+				</div>
 			</div>
 
-			<div class="link-cloud">
-				<a href="#" class="link-cloud__item link-cloud__item--bold">Книги, издания</a>
-				<a href="#" class="link-cloud__item">Фантастика</a>
-				<a href="#" class="link-cloud__item">Детективы</a>
-				<a href="#" class="link-cloud__item">Романы</a>
-				<a href="#" class="link-cloud__item">Журналы</a>
-			</div>
+			<div class="objects__map-wrapper draggable" id="imapRussiaWrapper">
+				<div class="objects__mask"></div>
+				<object data="/img/map/russia-map-new.svg" type="image/svg+xml" id="imapRussia" width="100%" height="auto"></object>
 
-			<div class="link-cloud">
-				<a href="#" class="link-cloud__item link-cloud__item--bold">Наши проекты</a>
-				<a href="#" class="link-cloud__item">Пикан – уральская спаржа</a>
-				<a href="#" class="link-cloud__item">Письмо прадеду в окопы</a>
-				<a href="#" class="link-cloud__item">Чистый почерк</a>
-				<a href="#" class="link-cloud__item">Уральская шаньга</a>
-			</div>
+				<div class="objects__marker objects__marker--moscow2">
+					<p class="objects__text"><span class="bold">2016 год (Москва)</span>
+						<br>
+						Разработка и запуск сервиса прямого обмена данными с АС ЭТРАН РЖД в режиме АСУ-АСУ с ЭЦП (проект <span class="pink">ILSAREtranConnector</span>) на 13-ти площадках с установленными информационными системами учета отгрузок <span class="blue">ILSARShip</span> в группе компаний СУЭК. (Москва)<span class="objects__close"></span></p>
+					</div>
 
-			<div class="link-cloud">
-				<a href="#" class="link-cloud__item link-cloud__item--bold">О нас</a>
-			</div>
+					<div class="objects__marker objects__marker--moscow">
+						<p class="objects__text"><span class="bold">2017 год (Москва)</span>
+							<br>
+							Разработка и запуск сервиса прямого обмена данными с АС ЭТРАН РЖД в режиме АСУ-АСУ с ЭЦП (проект <span class="pink">ILSAREtranConnector</span>) на 3-х стивидорных площадках установленными информационно-логистическими системами ILSAR по автоматизации стивидорной деятельности, в группе компаний СУЭК.
+							<span class="objects__close"></span>
+						</p>
+					</div>
 
-			<div class="copyright">
-				<img src="/img/logo_port23.png" alt="" class="copyright__img">
-				<p class="copyright__text">© АНО ИД “Кремлёвский стан”<br>2018-2018<br>Developed and built by PORT23</p>
-			</div>
-		</div>
-	</footer>
+					<div class="objects__marker objects__marker--chernogorsk">
+						<p class="objects__text"><span class="bold">2017 год (Черногорск, Республика Хакасия)</span>
+							<br>
+							Разработка и запуск информационно-логистической системы <span class="red">ILSAR RW</span> по автоматизации и учету деятельности Погрузочно-Транспортного Управления для АО «ПромТранс».
+							<span class="objects__close"></span>
+						</p>
+					</div>
 
-	<script src="/js/jquery-3.1.1.js"></script>
-	<script src="/js/jquery-migrate-1.4.1.min.js"></script>
-	<script src="/js/input.mask.bundle.min.js"></script>
-	<script src="/js/slick.js"></script>
-	<script src="/js/script.js"></script>
+					<div class="objects__marker objects__marker--murmansk">
+						<p class="objects__text"><span class="bold">2018 год  (Мурманск) </span>
+							<br>
+							Разработка автоматизированной информационной системы производственного экологического контроля воздействия производственной деятельности предприятия на окружающую среду <span class="green">ILSAREcoMonitor</span> для ПАО «ММТП».
+							<span class="objects__close"></span>
+						</p>
+					</div>
 
-</body>
-</html>
+					<div class="objects__marker objects__marker--borodino-ilsar">
+						<p class="objects__text"><span class="bold">2012 год (г. Бородино, Красноярский край)</span>
+							<br>
+							Адаптация и запуск «Системы учёта отгрузок навалочных разработка и запуск «Системы учёта отгрузок навалочных грузов с разрезов и шахт горнодобывающих предприятий» (проект – ИСАУО <span class="blue">ILSARShip</span>) на разрезе «Бородинский», Красноярский край, (ОАО «СУЭК-Красноярск»)
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--borodino">
+						<p class="objects__text"><span class="bold">2017 год (Город Бородино, Красноярский край)</span>
+							<br>
+							Разработка и запуск информационно-логистической системы <span class="red">ILSAR RW</span> по автоматизации и учету деятельности Погрузочно-Транспортного Управления для Филиала АО «СУЭК-Красноярск» «Бородинское ПТУ». Красноярский край, Россия.
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--abakan">
+						<p class="objects__text"><span class="bold">2016 год (Абакан) </span>
+							<br>
+							АРМ <span class="orange">ILSARScale</span> для всех весовых пунктов (ЖД-/Авто- отгрузки), точек взвешивания (27 шт.) на ООО «СУЭК-Хакасия», для унификации всего используемого оборудования и работе в режиме «одного окна» или по заданиям на погрузку, с увязкой с ИСАУО ILSARShip и корпоративной ERP.
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--chara">
+						<p class="objects__text"><span class="bold">2014 год (Забайкальский край, Каларский р-н, с. Чара)</span>
+							<br>
+							адаптация и запуск «Системы учёта отгрузок навалочных грузов с разрезов и шахт горнодобывающих предприятий» (проект – Информационная система автоматизированного учета отгрузок <span class="blue">ILSARShip</span>) на разрезе Апсатский (ООО «Арктические разработки»)
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--kirba">
+						<p class="objects__text"><span class="bold">2013 год (Республика Хакасия, Бейский р-н, с. Кирба)</span>
+							<br>
+							адаптация и запуск «Системы учёта отгрузок навалочных грузов с разрезов ишахт горнодобывающих предприятий» (проект ИСАУО <span class="blue">ILSARShip</span>) на Восточно-Бейском разрезе (ООО «Восточно-Бейский разрез»)
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--vanino">
+						<p class="objects__text"><span class="bold">2011 год (Ванинский р-н, Хабаровский край)</span>
+							<br>
+							Разработка и запуск системы сдачи/приемки вагонов на ручных переносных терминалах сбора данных (система ILSARMobile) на Ванинском балкерном терминале в МТП Ванино, Хабаровский край, (ЗАО Дальтрансуголь).
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--vanino2">
+						<p class="objects__text"><span class="bold">2011 год (Ванинский р-н, Хабаровский край)</span>
+							<br>
+							разработка и запуск системы принятия решения для руководящего персонала на основе мобильных устройств на базе ОС iOS, Android системы вывода производственных показателей на мобильные устройства (система <span class="pink">ILSARMobileMonitor</span>) на Ванинском балкерном терминале в МТП Ванино, Хабаровский край.
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--whiteyar">
+						<p class="objects__text"><span class="bold">2013 год (Республика Хакасия, Алтайский р-н, с. Белый Яр) </span>
+							<br>
+							Адаптация и запуск «Системы учёта отгрузок навалочных грузов с разрезов и шахт горнодобывающих предприятий» (проект – ИСАУО <span class="blue">ILSARShip</span>) на разрезе Изыхский («Разрез Изыхский»)
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--chernogorsk2">
+						<p class="objects__text"><span class="bold">2013 год (Республика Хакасия, г.Черногорск)</span>
+							<br>
+							Адаптация и запуск «Системы учёта отгрузок навалочных грузов с разрезов и шахт горнодобывающих предприятий» (проект – ИСАУО <span class="blue">ILSARShip</span>) на разрезе Черногорский и шахте Хакасская (ООО «СУЭК-Хакасия»)
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--nazarovo">
+						<p class="objects__text"><span class="bold">2013 год (Красноярский край, г.Назарово)</span>
+							<br>
+							Адаптация и запуск «Системы учёта отгрузок навалочных грузов с разрезов и шахт горнодобывающих предприятий» (проект – Информационная система автоматизированного учета отгрузок <span class="blue">ILSARShip</span>) на разрезах Назаровский, Березовский-1
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--vostocniy">
+						<p class="objects__text"><span class="bold">2012 год (Забайкальский край, Улетовский р-н, п. Дровяная)</span>
+							<br>
+							Адаптация и запуск «Системы учёта отгрузок навалочных грузов с разрезов и шахт горнодобывающих предприятий» (проект – ИСАУО <span class="blue">ILSARShip</span>) на разрезе «Восточный» (ООО «ЧитаУголь»)
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--novoshaht">
+						<p class="objects__text"><span class="bold">2012 год (п.Новошахтинский Михайловский р-н Приморский край)</span>
+							<br>
+							Адаптация и запуск «Системы учёта отгрузок навалочных грузов с разрезов и шахт горнодобывающих предприятий» (проект – ИСАУО <span class="blue">ILSARShip</span>) на Разрезоуправление «Новошахтинское» (ОАО «ПриморскУголь»)
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--sherlgora">
+						<p class="objects__text"><span class="bold">2012 год (Забайкальский край, Борзинский р-н, пгт. Шерловая Гора)</span>
+							<br>
+							адаптация и запуск «Системы учёта отгрузок навалочных грузов с разрезов и шахт горнодобывающих предприятий» (проект – ИСАУО <span class="blue">ILSARShip</span>) на разрезе «Харанорский» (ОАО «Разрез Харанорский»).
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--sagannur">
+						<p class="objects__text"><span class="bold">2013 год (Республика Бурятия, Мухоршибирский район, поселок Саган-Нур)</span>
+							<br>
+							Адаптация и запуск «Системы учёта отгрузок навалочных грузов с разрезов и шахт горнодобывающих предприятий» (проект –ИСАУО <span class="blue">ILSARShip</span>) на разрезе Тугнуйский (ООО «Тугнуйская Обогатительная Фабрика»).
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--penza">
+						<p class="objects__text"><span class="bold">2014 год (Пензенская обл.,Никольский р-н, с. Усть-Инза)</span>
+							<br>
+							Адаптация и запуск «Автоматизированной системы учёта отгрузок цементного завода» (проект – Информационная система автоматизированного учета отгрузок <span class="blue">ILSARShip</span>) в Никольском филиале ООО «Азия Цемент».
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--murmansk2">
+						<p class="objects__text"><span class="bold">2015 год (г. Мурманск)</span>
+							<br>
+							разработка и запуск информационно-логистической системы (ИЛС) <span class="yellow">ILSARv3</span> для автоматизации и учета стивидорной деятельности в Мурманском Морском Торговом Порту (ПАО «ММТП», Россия, г. Мурманск)
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--spb">
+						<p class="objects__text"><span class="bold">2008 год (Санкт-Петербург)</span>
+							<br>
+							Разработка рабочей документации на ИТ-системы управления контейнерного терминала на территории ЗАО «Четвертая стивидорная компания», МТП Санкт-Петербург. Заказчик – ВАМИ-Автоматика, ген. заказчик - ОАО «ЛенМорНИИПроект».
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--ustluga">
+						<p class="objects__text"><span class="bold">2008 год (Усть-Луга, Лен. область)</span>
+							<br>
+							разработка и запуск информационно-логистической системы <span class="yellow">ILSAR</span> для угольного терминала в МТП Усть-Луга, Лен. область, (ОАО Ростерминалуголь)
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--ustluga2">
+						<p class="objects__text"><span class="bold">2009 год (Усть-Луга, Лен. область)</span>
+							<br>
+							разработка технического задания на Информационную Производственно –Логистическую Систему Комплекса Наливных Грузов в МТП Усть-Луга (ОАО «Роснефтьбункер»). Заказчик – ВАМИ-Автоматика, ген. заказчик - ОАО «ЛенМорНИИПроект».
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--ustluga3">
+						<p class="objects__text"><span class="bold">2009 год (Усть-Луга, Лен. область)</span>
+							<br>
+							Разработка программного обеспечения системы управления и ввод в эксплуатацию системы конвейерного транспорта фирмы Takraf на угольном терминале в МТП Усть-Луга, Лен. область, (ОАО Ростерминалуголь)
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--ustluga4">
+						<p class="objects__text"><span class="bold">2010 год (Усть-Луга, Лен. область,) </span>
+							<br>
+							интеграция системы МПЦ СЦБ от ЗАО «Автоматизированные системы и Комплексы» с <span class="bold">ИЛС ILSAR</span> для контроля за передвижением каждого вагона на собственных ЖД-путях на угольном терминале в МТП (ОАО Ростерминалуголь)
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--suhodol">
+						<p class="objects__text"><span class="bold">2014 год (порт Суходол) </span>
+							<br>
+							разработка проектной документации раздела <span class="bold">«АСУ Порта»</span> по объекту «Строительство нового специализированного порта на Дальневосточном побережье Российской Федерации для облегчения доступа к портовой инфраструктуре малых и средних угледобывающих предприятий». Заказчик – ООО «МорСтройТехнология». 
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--nahodka">
+						<p class="objects__text"><span class="bold">2015 год (г. Находка)</span>
+							<br>
+							Разработка и запуск информационно-логистической системы <span class="yellow">ILSAR</span> по автоматизации и учету стивидорной деятельности для Стивидорной Компании Малый Порт в МТП Восточный Порт, Приморский край, (ООО СК Малый Порт, входит в ОАО «СУЭК»).
+							<span class="objects__close"></span>
+						</p>
+					</div>
+
+					<div class="objects__marker objects__marker--posiet">
+						<p class="objects__text"><span class="bold">2017 год (Приморский край, Хасанский район, п. г. т. Посьет)</span>
+							<br>
+							Разработка и запуск информационно-логистической системы <span class="yellow">ILSAR v3</span> по автоматизации и учету стивидорной деятельности для Торгового Порта Посьет.
+							<span class="objects__close"></span>
+						</p>
+					</div>
+				</div>
+
+			</section>
+
+			<section class="team">
+				<div class="container">
+					<h2 class="section-title">Наша команда:</h2>
+
+					<div class="team__item">
+						<div class="team__img-wrapper">
+							<img src="/img/stuff_img.png" alt="" class="team__img">
+						</div>
+						<p class="team__name">Павел Картопольцев</p>
+						<p class="team__stuff">Генеральный директор</p>
+					</div>
+
+					<div class="team__item">
+						<div class="team__img-wrapper">
+							<img src="/img/stuff_img.png" alt="" class="team__img">
+						</div>
+						<p class="team__name">Павел Картопольцев</p>
+						<p class="team__stuff">Генеральный директор</p>
+					</div>
+
+					<div class="team__item">
+						<div class="team__img-wrapper">
+							<img src="/img/stuff_img.png" alt="" class="team__img">
+						</div>
+						<p class="team__name">Павел Картопольцев</p>
+						<p class="team__stuff">Генеральный директор</p>
+					</div>
+
+					<div class="team__item">
+						<div class="team__img-wrapper">
+							<img src="/img/stuff_img.png" alt="" class="team__img">
+						</div>
+						<p class="team__name">Павел Картопольцев</p>
+						<p class="team__stuff">Генеральный директор</p>
+					</div>
+				</div>
+			</section>
+
+			<?php include ($_SERVER['DOCUMENT_ROOT'] . '/modules/footer.php'); ?>
+
+		</body>
+		</html>
