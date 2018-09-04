@@ -26,9 +26,9 @@
 		height: 400px;
 	}
 	object {
-		width: 1920px;
+		width: 1940px;
 		margin-top: 50px;
-		height: 800px;
+		height: 860px;
 		z-index: 10;
 	}
 	&__mask {
@@ -42,7 +42,7 @@
 		position: relative;
 		transform: scale(0.85);
 		top: -50px;
-		z-index: 9999;
+		z-index: 100;
 
 		@media(max-width: @screen-lg) and (min-width: @screen-md) {
 			transform: scale(0.75);
@@ -56,22 +56,28 @@
 	}
 	.container {
 		position: absolute;
-		height: 100%;
-		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
-		z-index: 100;
+		z-index: 1000;
+
+		&--top {
+			top: 0;
+		}
+		&--bottom {
+			bottom: 0;
+		}
 	}
+
 	&__box {
 		position: absolute;
-		left: 10%;
+		left: 0;
 		top: 60px;
 		z-index: 99999;
 		@media(max-width: @screen-md) and (min-width: @screen-sm) {
-			left: 30px;
+			left: 0;
 		}
 		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
-			left: 30px;
+			left: 0;
 			top: 20px;
 		}
 	}
@@ -92,15 +98,15 @@
 		background-color: rgba(118, 74, 255,.5);
 		position: absolute;
 		bottom: 40px;
-		right: 10%;
+		right: 0;
 		padding: 13px;
 		z-index: 99999;
 		@media(max-width: @screen-md) and (min-width: @screen-sm) {
-			right: 30px;
+			right: 0;
 			padding: 0 15px;
 		}
 		@media(max-width: @screen-sm) and (min-width: @screen-xs) {
-			right: 30px;
+			right: 0;
 			padding: 0 15px;
 			bottom: 20px;
 		}
@@ -192,7 +198,7 @@
 		}
 		&--posiet {
 			background-image: url('/img/map/markers/marker_ilsar_5.png');
-			transform: translate(-140%, -230%);
+			transform: translate(525%, 810%);
 		}
 		&--chernogorsk {
 			background-image: url('/img/map/markers/marker_ilsar_3.png');
