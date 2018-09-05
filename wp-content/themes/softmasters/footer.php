@@ -1,16 +1,17 @@
 	<footer class="page-footer">
 		<div class="container">
 			<div class="page-footer__logo-wrapper">
-				<img src="/img/footer_logo.png" alt="" class="page-footer__logo">
+				<img src="<?=get_stylesheet_directory_uri()?>/img/footer_logo.png" alt="" class="page-footer__logo">
 			</div>
 
 			<div class="page-footer__address">
-				<p>Россия, 188480,<br> Ленинградская область, г.Кингисепп,<br> Крикковское шоссе 20, офис 5Н.</p>
+				<!--<p>Россия, 188480,<br> Ленинградская область, г.Кингисепп,<br> Крикковское шоссе 20, офис 5Н.</p>-->
+                <?= get_option('main_yr')?>
 			</div>
 
 			<div class="page-footer__contacts">
-				<a href="#" class="page-footer__tel">+7(812) 313-23-11</a>
-				<a href="#" class="page-footer__mail">init@soft-masters.ru</a>
+				<a href="#" class="page-footer__tel"><?= get_option('main_tel')?></a>
+				<a href="#" class="page-footer__mail"><?= get_option('main_mail')?></a>
 				<div class="page-footer__social">
 					<a href="#" class="page-footer__social"></a>
 					<a href="#" class="page-footer__social"></a>

@@ -13,11 +13,11 @@
                     <li><a class="main-menu__link" href="/contacts/">Контакты</a></li>
                 </ul>
                 <a href="#" class="page-header__search"></a>
-                <a href="tel:+78123132311" class="page-header__tel">ТЕЛ.: +7(812) 313-23-11</a>
-                <div class="page-header__lang">
+                <a href="tel:+78123132311" class="page-header__tel">ТЕЛ.: <?= get_option('main_tel')?></a>
+                <!--<div class="page-header__lang">
                     <a href="#" class="page-header__lang-item page-header__lang-item--active">RU</a>
                     <a href="#" class="page-header__lang-item">ENG</a>
-                </div>
+                </div>-->
             </div>
         </nav>
         <div class="main-menu__burger-wrapper">
