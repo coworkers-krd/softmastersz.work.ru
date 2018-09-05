@@ -1,7 +1,9 @@
 <div class="product__item">
-    <img src="<?=get_stylesheet_directory_uri()?>/img/logo_v3_ilsar.png" alt="" class="product__logo">
-    <p class="product__text">ILSAR – информационно логистическая система (ИЛС)</p>
+    <?php if ( has_post_thumbnail()) { ?>
+    <img src="<? the_post_thumbnail_url()?>" alt="" class="product__logo">
+    <?php } ?>
+    <p class="product__text"><b><?php the_title(); ?></b> – <?= get_the_excerpt()?></p>
     <div class="product__btn-wrapper">
-        <a href="#" class="product__btn">подробнее</a>
+        <a href="<?php the_permalink() ?>" class="product__btn">подробнее</a>
     </div>
 </div>
