@@ -11,3 +11,6 @@ function add_scripts() {
     wp_enqueue_script('js', get_stylesheet_directory_uri() .'/js/script.min.js');
 }
 add_action('wp_enqueue_scripts', 'add_scripts');
+
+
+add_theme_support( 'post-thumbnails' ); // включаем миниатюры для всех типов постов
