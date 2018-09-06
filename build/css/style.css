@@ -3010,7 +3010,6 @@ a.ui-button:active,
   transform: translateY(-50%);
   width: 110%;
   height: 150%;
-  transition: 0.3s;
   z-index: -1;
 }
 .product .container {
