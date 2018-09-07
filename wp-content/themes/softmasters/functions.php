@@ -85,3 +85,36 @@ $main_options = array(
 );
 if( class_exists( 'trueOptionspage' ) )
     new trueOptionspage( $main_options );
+
+
+
+/*
+ * Добавляем тип поста для партнеров
+ */
+add_action( 'init', 'partners' ); // Использовать функцию только внутри хука init
+
+function partners() {
+    $labels = array(
+        'name' => 'Партнеры',
+        'singular_name' => 'Партнера',
+        'add_new' => 'Добавить партнера',
+        'add_new_item' => 'Добавить нового партнера',
+        'edit_item' => 'Редактировать партнера',
+        'new_item' => 'Новый партнер',
+        'all_items' => 'Все партнеры',
+        'view_item' => 'Просмотр партенров на сайте',
+        'search_items' => 'Искать пертнеров',
+        'not_found' => 'партнеров не найдено',
+        'not_found_in_trash' => 'В корзине нет партнеров.',
+        'menu_name' => 'Партнеры'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_icon' => 'dashicons-businessman',
+        'menu_position' => 5,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail')
+    );
+    register_post_type( 'partners', $args);
+}

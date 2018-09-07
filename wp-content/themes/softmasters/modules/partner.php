@@ -4,7 +4,7 @@
 
         <?php
         global $post;
-        $args = array( 'numberposts' => -1 ,'category' => get_cat_ID( 'Партнеры' ), 'orderby' => 'date');
+        $args = array( 'numberposts' => -1 ,'post_type' => 'partners', 'orderby' => 'date');
         $myposts = get_posts( $args );
         foreach( $myposts as $post ){ setup_postdata($post);
 
