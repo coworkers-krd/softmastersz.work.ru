@@ -15,6 +15,20 @@ add_action('wp_enqueue_scripts', 'add_scripts');
 
 add_theme_support( 'post-thumbnails' ); // включаем миниатюры для всех типов постов
 
+/*
+ * Включаем поддержку меню
+ */
+if (function_exists('add_theme_support')) {
+    add_theme_support('menus');
+}
+
+/*
+ * Включаем поддержку кастомных полей
+ */
+function true_custom_fields() {
+    add_post_type_support( 'post', 'custom-fields'); // в качестве первого параметра укажите название типа поста
+}
+add_action('init', 'true_custom_fields');
 
 /*
  * Страничка настроек в Админке
@@ -87,7 +101,6 @@ if( class_exists( 'trueOptionspage' ) )
     new trueOptionspage( $main_options );
 
 
-
 /*
  * Добавляем тип поста для партнеров
  */
@@ -118,3 +131,77 @@ function partners() {
     );
     register_post_type( 'partners', $args);
 }
+
+/*
+ * Добавляем тип поста для истории компании
+ */
+add_action( 'init', 'history' ); // Использовать функцию только внутри хука init
+
+function history() {
+    $labels = array(
+        'name' => 'История Компании',
+        'singular_name' => 'Историю',
+        'add_new' => 'Добавить историю',
+        'add_new_item' => 'Добавить новую историю',
+        'edit_item' => 'Редактировать историю',
+        'new_item' => 'Новая история',
+        'all_items' => 'Все истории',
+        'view_item' => 'Просмотр иторий на сайте',
+        'search_items' => 'Искать истории',
+        'not_found' => 'истории не найдены',
+        'not_found_in_trash' => 'В корзине нет историй.',
+        'menu_name' => 'История'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_icon' => 'dashicons-clock',
+        'menu_position' => 5,
+        'has_archive' => true,
+        'taxonomies' => array(
+            'years',
+        ),
+        'supports' => array( 'title', 'editor', 'thumbnail')
+    );
+    register_post_type( 'history', $args);
+}
+/*
+ * Добавляем таксономию годов для истории компании
+ */
+function add_new_taxonomies() {
+    register_taxonomy('years',
+        array('history'),
+        array(
+            'hierarchical' => false,
+            'labels' => array(
+                'name' => 'Год',
+                'singular_name' => 'Год',
+                'search_items' =>  'Найти год',
+                'popular_items' => 'Популярные года',
+                'all_items' => 'Все года',
+                'parent_item' => null,
+                'parent_item_colon' => null,
+                'edit_item' => 'Редактировать год',
+                'update_item' => 'Обновить год',
+                'add_new_item' => 'Добавить новый год',
+                'new_item_name' => 'Ныовый год',
+                'add_or_remove_items' => 'Добавить или удалить год',
+                'menu_name' => 'Года для истории'
+            ),
+            'public' => true,
+            'show_in_nav_menus' => true,
+            'show_ui' => true,
+            'show_tagcloud' => true,
+            'update_count_callback' => '_update_post_term_count',
+            'capabilities'          => array(
+                'manage_terms',
+                'edit_terms',
+                'delete_terms',
+                'assign_terms',
+            ),
+            'meta_box_cb'           => 'post_tags_meta_box', // callback функция. Отвечает за html код метабокса (с версии 3.8): post_categories_meta_box или post_tags_meta_box. Если указать false, то метабокс будет отключен вообще
+            'show_admin_column'     => true,
+        )
+    );
+}
+add_action( 'init', 'add_new_taxonomies', 0 );
