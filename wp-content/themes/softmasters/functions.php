@@ -31,7 +31,7 @@ function true_custom_fields() {
 add_action('init', 'true_custom_fields');
 
 /*
- * Страничка настроек в Админке
+ * Страничка Общих настроек в Админке
  */
 $main_options = array(
     // yes, slug is the part of the option name, so, to get the value, use
@@ -137,6 +137,59 @@ $main_options = array(
 );
 if( class_exists( 'trueOptionspage' ) )
     new trueOptionspage( $main_options );
+
+
+/*
+ * Домполнительные поля для мета-тегов
+ */
+$metabox = array(
+
+    // ID of the metabox and custom field name prefix
+    'id' =>	'meta',
+
+    // Only users with this capability can see the metabox
+    'capability' => 'edit_posts',
+
+    // metabox title
+    'name' => 'Мета данные страницы',
+
+    // custom post types names, you can use array( 'page', 'post', 'your_type' )
+    'post_type' => array('page','post'),
+
+    // metabox position: low | high | default
+    'priority' => 'high',
+
+    // array of all metabox input field and their params
+    'args' => array(
+
+        /* simple text input */
+        array(
+            'id'	=> 'title',
+            'label' => 'Title',
+            'description' => 'Title который будет отображаться для страницы',
+            'type'	=> 'text',
+        ),
+
+        /* simple text input */
+        array(
+            'id'	=> 'key',
+            'label' => 'Keywords',
+            'type'	=> 'text',
+        ),
+
+        /* simple text input */
+        array(
+            'id'	=> 'desc',
+            'label' => 'Description',
+            'type'	=> 'textarea',
+        ),
+
+    )
+
+);
+
+new trueMetaBox( $metabox );
+
 
 
 /*
