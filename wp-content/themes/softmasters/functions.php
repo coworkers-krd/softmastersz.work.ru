@@ -95,6 +95,44 @@ $main_options = array(
             )
         ),
 
+        array(
+
+            // section ID isn't used anywhere, but it is required
+            'id' => 'promo',
+
+            // section name is displayed as h2 heading
+            'name' => 'Текст для промо',
+
+            // and only now the array of fields
+            'fields' => array(
+                array(
+                    'id'			=> 'promo-label',
+                    'label'			=> 'Заголовок',
+                    'type'			=> 'text', // table of types is above
+                    'placeholder' 	=> 'Заголовок для промо'
+                ),
+                array(
+                    'id'			=> 'promo-text',
+                    'label'			=> 'Текст ниже заголовка',
+                    'type'			=> 'textarea', // table of types is above
+                    'placeholder' 	=> 'Текст под заголовком'
+                ),
+                array(
+                    'id'			=> 'promo-video1',
+                    'label'			=> 'Видео .webm',
+                    'type'			=> 'text', // table of types is above
+                    'description' => 'Название первого видео-файла для фона',
+                ),
+                array(
+                    'id'			=> 'promo-video2',
+                    'label'			=> 'Видео .mp4',
+                    'type'			=> 'text', // table of types is above
+                    'description' => 'Директория хранения файлов <code>img/video</code> в папке темы',
+                ),
+            )
+        ),
+
+
     )
 );
 if( class_exists( 'trueOptionspage' ) )
