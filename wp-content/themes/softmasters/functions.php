@@ -154,7 +154,7 @@ $metabox = array(
     'name' => 'Мета данные страницы',
 
     // custom post types names, you can use array( 'page', 'post', 'your_type' )
-    'post_type' => array('page','post'),
+    'post_type' => array('page','products'),
 
     // metabox position: low | high | default
     'priority' => 'high',
@@ -296,3 +296,68 @@ function add_new_taxonomies() {
     );
 }
 add_action( 'init', 'add_new_taxonomies', 0 );
+
+
+/*
+ * Добавляем тип поста для партнеров
+ */
+add_action( 'init', 'products' ); // Использовать функцию только внутри хука init
+
+function products() {
+    $labels = array(
+        'name' => 'Продукты',
+        'singular_name' => 'Продукт',
+        'add_new' => 'Добавить продукт',
+        'add_new_item' => 'Добавить новый продукт',
+        'edit_item' => 'Редактировать продкут',
+        'new_item' => 'Новый продукт',
+        'all_items' => 'Все продукты',
+        'view_item' => 'Просмотр продуктов на сайте',
+        'search_items' => 'Искать продукты',
+        'not_found' => 'продукты не найдены',
+        'not_found_in_trash' => 'В корзине нет ппродуктов.',
+        'menu_name' => 'Наши Продукты'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_icon' => 'dashicons-products',
+        'menu_position' => 5,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt')
+    );
+    register_post_type( 'products', $args);
+}
+
+// Change the menu item labels
+function change_post_menu_label() {
+    global $menu;
+    global $submenu;
+    $menu[5][0] = 'Новости';
+    $submenu['edit.php'][5][0] = 'Новости';
+    $submenu['edit.php'][10][0] = 'Добавить Новость';
+    $submenu['edit.php'][15][0] = 'Категории'; // Change name for categories
+    $submenu['edit.php'][16][0] = 'Метки'; // Change name for tags
+    echo '';
+}
+add_action( 'admin_menu', 'change_post_menu_label' );
+
+// Change the post object labels
+function change_post_object_label() {
+    global $wp_post_types;
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = 'Новости';
+    $labels->singular_name = 'Новость';
+    $labels->add_new = 'Добавить Новость';
+    $labels->add_new_item = 'Добавть Новость';
+    $labels->edit_item = 'Редактировать Новость';
+    $labels->new_item = 'Новость';
+    $labels->view_item = 'Посмотреть Новости';
+    $labels->search_items = 'Искать новости';
+    $labels->not_found = 'Новостей не найдено';
+    $labels->not_found_in_trash = 'Нет Новостей в корзине';
+
+    $wp_post_types['post']->menu_icon = 'dashicons-megaphone';
+}
+add_action( 'init', 'change_post_object_label' );

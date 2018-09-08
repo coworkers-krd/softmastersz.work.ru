@@ -26,12 +26,14 @@
 
         <ul>
             <?php
+            $product_id = $post->ID;
             global $post;
-            $args = array( 'numberposts' => -1 ,'category' => get_cat_ID( 'Продукты' ), 'orderby' => 'date');
+            $args = array( 'numberposts' => -1 ,'post_type' => 'products', 'orderby' => 'date');
             $myposts = get_posts( $args );
             foreach( $myposts as $post ){ setup_postdata($post);
-
-                get_template_part("modules/content/product-item-light");
+                if($post->ID != $product_id){
+                    get_template_part("modules/content/product-item-light");
+                }
             }
             wp_reset_postdata();
             ?>
@@ -39,6 +41,6 @@
     </div>
 </section>
 
-<script src='/js/script.min.js?v=<?php echo date(U); ?>'></script>
+
 
 <?php get_footer(); ?>

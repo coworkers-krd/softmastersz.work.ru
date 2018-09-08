@@ -9,7 +9,7 @@
         if( get_post_meta($post->ID, 'meta_title',true)!='' ){
             $title = get_post_meta($post->ID, 'meta_title',true);
         }else{
-            $title = bloginfo('name');
+            $title = get_bloginfo('name');
         }
 
         if( get_post_meta($post->ID, 'meta_key',true)!='' ){

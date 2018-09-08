@@ -19,7 +19,7 @@
 				</div>
 			</div>
 
-			<p class="page-footer__copyright">softmasters 2018 ©</p>
+			<p class="page-footer__copyright">softmasters <?= date('Y'); ?> ©</p>
 
 		</div>
 	</footer>

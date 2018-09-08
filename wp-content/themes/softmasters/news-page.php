@@ -17,7 +17,7 @@
 
     <?php
     global $post;
-    $args = array( 'numberposts' => -1 ,'category' => get_cat_ID( 'Новости' ), 'orderby' => 'date');
+    $args = array( 'numberposts' => -1 ,'orderby' => 'date');
     $myposts = get_posts( $args );
     foreach( $myposts as $post ){ setup_postdata($post);
 
