@@ -23,7 +23,7 @@ body {
   margin: 0;
 }
 
-body.logged-id .page-header {
+body.logged-in .page-header {
   top: 30px;
 }
 /**
