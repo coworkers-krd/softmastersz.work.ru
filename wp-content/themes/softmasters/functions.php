@@ -22,6 +22,12 @@ if (function_exists('add_theme_support')) {
     add_theme_support('menus');
 }
 
+register_nav_menus(
+    array(
+        'head_menu' => 'Меню в Шапке',
+    )
+);
+
 /*
  * Включаем поддержку кастомных полей
  */
