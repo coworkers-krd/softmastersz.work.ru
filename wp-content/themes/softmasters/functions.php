@@ -367,3 +367,5 @@ function change_post_object_label() {
     $wp_post_types['post']->menu_icon = 'dashicons-megaphone';
 }
 add_action( 'init', 'change_post_object_label' );
+
+
