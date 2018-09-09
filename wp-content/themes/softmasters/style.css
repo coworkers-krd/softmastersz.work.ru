@@ -3603,7 +3603,7 @@ a.ui-button:active,
   width: 95%;
   margin-bottom: 30px;
 }
-.container > h2 {
+.content > .container > h2 {
  font-size: 27px;
  font-weight: 900;
  color: #261861;
