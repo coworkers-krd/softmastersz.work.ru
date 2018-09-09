@@ -6,7 +6,9 @@
             <h1 class="promo__title promo__title--product"><?php the_title(); ?></h1>
             <p class="promo__text"><?= get_the_excerpt()?></p>
         </div>
-        <img src="<? the_post_thumbnail_url()?>" alt="">
+        <div class="promo__product-img-wrapper">
+            <img src="<? the_post_thumbnail_url()?>" alt="">
+        </div>
     </div>
 </section>
 
