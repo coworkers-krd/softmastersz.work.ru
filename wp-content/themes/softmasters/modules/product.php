@@ -1,5 +1,5 @@
 <section class="product" id="product">
-    <div class="product__paralax"></div>
+    <div class="product__paralax" id="product__paralax"></div>
     <div class="container">
 
         <h2 class="section-title section-title--white">Наши продукты</h2>

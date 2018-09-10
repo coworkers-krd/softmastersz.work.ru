@@ -8,18 +8,18 @@
             <div class="main-menu__wrapper">
 
                 <ul>
-                <?
+                    <?
                 if( $menu_items = wp_get_nav_menu_items('main-menu') ) { // "Меню для шапки" - это название моего меню. Вы можете также использовать ID или ярлык
-                    $menu_list = '';
-                    foreach ( $menu_items as $menu_item ) {
+                $menu_list = '';
+                foreach ( $menu_items as $menu_item ) {
                         $title = $menu_item->title; // заголовок элемента меню (анкор ссылки)
                         $url = $menu_item->url;
 
-                            echo '<li><a href="' . $url . '" class="main-menu__link">' . $title . '</a></li>';
-                            }
+                        echo '<li><a href="' . $url . '" class="main-menu__link">' . $title . '</a></li>';
+                    }
                 }
                 ?>
-                </ul>
+            </ul>
 
                 <!--<ul>
                     <li><a class="main-menu__link" href="/#about">О компании</a></li>
@@ -29,7 +29,7 @@
                 </ul>-->
 
 
-                <a href="#" class="page-header__search"></a>
+                <div class="page-header__search"></div>
                 <a href="tel:+78123132311" class="page-header__tel">ТЕЛ.: <?= get_option('main_tel')?></a>
                 <!--<div class="page-header__lang">
                     <a href="#" class="page-header__lang-item page-header__lang-item--active">RU</a>
@@ -39,6 +39,15 @@
         </nav>
         <div class="main-menu__burger-wrapper">
             <div class="main-menu__burger"></div>
+        </div>
+
+        <div class="search__wrapper" id="seach_block">
+            <div class="container">
+                <span class="search__input-wrapper">
+                    <input type="text" class="input__search-input" name="search" id="input_search" placeholder="ВВЕДИТЕ ЗАПРОС">
+                </span>
+                <span class="search__close"></span>
+            </div>
         </div>
     </div>
 </header>

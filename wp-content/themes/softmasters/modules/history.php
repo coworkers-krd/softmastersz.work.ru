@@ -21,7 +21,7 @@
                     $items_count--;
                     ?>
 
-                    <div class="history__case <?=($items_count==0)? "active":""?>">
+                    <div class="history__case<?=($items_count==0)? " active":""?>">
                         <h3 class="history__year"><span class="history__number"><?=$term->name?></span> год</h3>
                         <div class="history__content">
                             <ul>
