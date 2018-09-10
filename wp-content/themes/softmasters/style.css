@@ -3107,8 +3107,8 @@ a.ui-button:active,
   transform: translateY(0);
   left: 0;
   width: 110%;
-  height: 150%;
-  /*transition: 0.3s;*/
+  height: 300%;
+  transition: 0.2s;
   z-index: -1;
 }
 .product .container {
@@ -3828,7 +3828,7 @@ a.ui-button:active,
   display: flex;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-top: 30px;
+  padding: 50px 0;
 }
 .contacts__column {
   width: 50%;
@@ -3848,13 +3848,13 @@ a.ui-button:active,
   position: relative;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .contacts__title {
   color: #261861;
   font-size: 22px;
   font-weight: normal;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .contacts__text {
   color: #261861;

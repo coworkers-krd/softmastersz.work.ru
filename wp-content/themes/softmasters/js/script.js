@@ -147,7 +147,7 @@ jQuery(document).ready(function(){
 		var scroll = jQuery(window).scrollTop();
 		var product = jQuery('.product').offset().top;
 		var productHeight = jQuery('.product').height();
-		var counter = -((scroll - product) / scroll * 100) / 4 - 40;
+		var counter = -((scroll - product) / scroll * 100) - 40;
 		// console.log(counter);
 		jQuery('#product__paralax').css('top',counter + '%');
 	}
