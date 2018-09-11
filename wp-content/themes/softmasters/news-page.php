@@ -41,8 +41,6 @@
         get_template_part("modules/content/news-item");
 
     endwhile;
-
-
     ?>
 
     <? wp_pagenavi(); ?>

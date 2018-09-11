@@ -43,9 +43,7 @@
 
         <div class="search__wrapper" id="seach_block">
             <div class="container">
-                <span class="search__input-wrapper">
-                    <input type="text" class="input__search-input" name="search" id="input_search" placeholder="ВВЕДИТЕ ЗАПРОС">
-                </span>
+                <?php get_search_form(); ?>
                 <span class="search__close"></span>
             </div>
         </div>
