@@ -43,7 +43,7 @@
 
 
             if (!have_posts()){?>
-                <h2>Поиск по запросу "<?=get_search_query()?>" не дал результатов.</h2>
+                <h2 class="news__empty">Поиск по запросу "<?=get_search_query()?>" не дал результатов.</h2>
             <?php
             }
             ?>
