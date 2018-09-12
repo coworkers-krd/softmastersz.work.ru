@@ -13,9 +13,9 @@
 				<a href="#" class="page-footer__tel"><?= get_option('main_tel')?></a>
 				<a href="#" class="page-footer__mail"><?= get_option('main_mail')?></a>
 				<div class="page-footer__social">
-					<a href="#" class="page-footer__social"></a>
-					<a href="#" class="page-footer__social"></a>
-					<a href="#" class="page-footer__social"></a>
+					<a href="<?= get_option('social_vk')?>" class="page-footer__social-link page-footer__social-link--vk"></a>
+					<a href="<?= get_option('social_insta')?>" class="page-footer__social-link page-footer__social-link--insta"></a>
+					<a href="<?= get_option('social_fb')?>" class="page-footer__social-link page-footer__social-link--fb"></a>
 				</div>
 			</div>
 

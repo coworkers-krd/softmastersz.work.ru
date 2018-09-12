@@ -2084,7 +2084,7 @@ a.ui-button:active,
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  /*height: 100%;*/
+  height: 100%;
 }
 .promo .container:after {
   content: '';
@@ -2104,6 +2104,9 @@ a.ui-button:active,
   height: auto;
   min-height: auto;
   padding-bottom: 30px;
+}
+.promo--product .container {
+  height: auto;
 }
 .promo--product:after {
   display: none;
@@ -3318,6 +3321,7 @@ a.ui-button:active,
   color: #fff;
   font-size: 16px;
   text-decoration: none;
+  line-height: 1.5;
 }
 .page-footer__copyright {
   -ms-flex-preferred-size: 100%;
@@ -3325,6 +3329,38 @@ a.ui-button:active,
   color: #fff;
   font-size: 16px;
   padding-left: 15px;
+}
+.page-footer__social {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.page-footer__social-link {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-right: 15px;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center;
+}
+.page-footer__social-link--vk {
+  background-image: url(img/social-01.svg);
+}
+.page-footer__social-link--insta {
+  background-image: url(img/social-02.svg);
+}
+.page-footer__social-link--fb {
+  background-image: url(img/social-03.svg);
 }
 .objects {
   display: -ms-flexbox;
@@ -3460,125 +3496,127 @@ a.ui-button:active,
   top: 50%;
   left: 50%;
   text-decoration: none;
-  width: 35px;
+  width: 34px;
   height: 45px;
   z-index: 999;
   cursor: pointer;
   background-image: url('img/plus_icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .objects__marker:hover {
   z-index: 9999;
 }
 .objects__marker--moscow2 {
-  background-image: url('img/map/markers/marker_ilsar_6.png');
+  background-image: url('img/map/markers/marker_ilsar_6.svg');
   transform: translate(-1440%, 400%);
 }
 .objects__marker--moscow {
-  background-image: url('img/map/markers/marker_ilsar_6.png');
+  background-image: url('img/map/markers/marker_ilsar_6.svg');
   transform: translate(-1470%, 400%);
 }
 .objects__marker--posiet {
-  background-image: url('img/map/markers/marker_ilsar_5.png');
+  background-image: url('img/map/markers/marker_ilsar_5.svg');
   transform: translate(525%, 810%);
 }
 .objects__marker--chernogorsk {
-  background-image: url('img/map/markers/marker_ilsar_3.png');
+  background-image: url('img/map/markers/marker_ilsar_3.svg');
   transform: translate(-340%, 570%);
 }
 .objects__marker--murmansk {
-  background-image: url('img/map/markers/marker_ilsar_2.png');
-  transform: translate(-1590%, -20%);
+  background-image: url('img/map/markers/marker_ilsar_2.svg');
+  transform: translate(-1630%, -20%);
 }
 .objects__marker--borodino-ilsar {
-  background-image: url('img/map/markers/marker_ilsar_1.png');
+  background-image: url('img/map/markers/marker_ilsar_1.svg');
   transform: translate(-250%, 500%);
 }
 .objects__marker--borodino {
-  background-image: url('img/map/markers/marker_ilsar_3.png');
+  background-image: url('img/map/markers/marker_ilsar_3.svg');
   transform: translate(-210%, 500%);
 }
 .objects__marker--abakan {
-  background-image: url('img/map/markers/marker_ilsar_4.png');
+  background-image: url('img/map/markers/marker_ilsar_4.svg');
   transform: translate(-270%, 520%);
 }
 .objects__marker--chara {
-  background-image: url('img/map/markers/marker_ilsar_1.png');
+  background-image: url('img/map/markers/marker_ilsar_1.svg');
   transform: translate(-240%, 550%);
 }
 .objects__marker--kirba {
-  background-image: url('img/map/markers/marker_ilsar_1.png');
+  background-image: url('img/map/markers/marker_ilsar_1.svg');
   transform: translate(-350%, 540%);
 }
 .objects__marker--vanino {
-  background-image: url('img/map/markers/marker_ilsar_7.png');
+  background-image: url('img/map/markers/marker_ilsar_7.svg');
   transform: translate(700%, 620%);
 }
 .objects__marker--vanino2 {
-  background-image: url('img/map/markers/marker_ilsar_6.png');
+  background-image: url('img/map/markers/marker_ilsar_6.svg');
   transform: translate(680%, 620%);
 }
 .objects__marker--whiteyar {
-  background-image: url('img/map/markers/marker_ilsar_1.png');
+  background-image: url('img/map/markers/marker_ilsar_1.svg');
   transform: translate(-380%, 560%);
 }
 .objects__marker--chernogorsk2 {
-  background-image: url('img/map/markers/marker_ilsar_1.png');
+  background-image: url('img/map/markers/marker_ilsar_1.svg');
   transform: translate(-390%, 500%);
 }
 .objects__marker--nazarovo {
-  background-image: url('img/map/markers/marker_ilsar_1.png');
+  background-image: url('img/map/markers/marker_ilsar_1.svg');
   transform: translate(-390%, 480%);
 }
 .objects__marker--vostocniy {
-  background-image: url('img/map/markers/marker_ilsar_1.png');
+  background-image: url('img/map/markers/marker_ilsar_1.svg');
   transform: translate(-330%, 480%);
 }
 .objects__marker--novoshaht {
-  background-image: url('img/map/markers/marker_ilsar_1.png');
+  background-image: url('img/map/markers/marker_ilsar_1.svg');
   transform: translate(150%, 590%);
 }
 .objects__marker--sherlgora {
-  background-image: url('img/map/markers/marker_ilsar_1.png');
+  background-image: url('img/map/markers/marker_ilsar_1.svg');
   transform: translate(550%, 780%);
 }
 .objects__marker--sagannur {
-  background-image: url('img/map/markers/marker_ilsar_1.png');
+  background-image: url('img/map/markers/marker_ilsar_1.svg');
   transform: translate(30%, 590%);
 }
 .objects__marker--penza {
-  background-image: url('img/map/markers/marker_ilsar_1.png');
+  background-image: url('img/map/markers/marker_ilsar_1.svg');
   transform: translate(-1330%, 550%);
 }
 .objects__marker--murmansk2 {
-  background-image: url('img/map/markers/marker_ilsar_5.png');
-  transform: translate(-1560%, -17%);
+  background-image: url('img/map/markers/marker_ilsar_5.svg');
+  transform: translate(-1640%, -17%);
 }
 .objects__marker--spb {
-  background-image: url('img/map/markers/marker_ilsar_ir.png');
+  background-image: url('img/map/markers/marker_ilsar_9.svg');
   transform: translate(-1670%, 340%);
 }
 .objects__marker--ustluga {
-  background-image: url('img/map/markers/marker_ilsar_5.png');
+  background-image: url('img/map/markers/marker_ilsar_5.svg');
   transform: translate(-1700%, 390%);
 }
 .objects__marker--ustluga2 {
-  background-image: url('img/map/markers/marker_ilsar_ir.png');
+  background-image: url('img/map/markers/marker_ilsar_9.svg');
   transform: translate(-1680%, 400%);
 }
 .objects__marker--ustluga3 {
-  background-image: url('img/map/markers/marker_ilsar_asu.png');
+  background-image: url('img/map/markers/marker_ilsar_8.svg');
   transform: translate(-1650%, 390%);
 }
 .objects__marker--ustluga4 {
-  background-image: url('img/map/markers/marker_ilsar_asu.png');
+  background-image: url('img/map/markers/marker_ilsar_8.svg');
   transform: translate(-1690%, 370%);
 }
 .objects__marker--suhodol {
-  background-image: url('img/map/markers/marker_ilsar_asu.png');
+  background-image: url('img/map/markers/marker_ilsar_8.svg');
   transform: translate(570%, 800%);
 }
 .objects__marker--nahodka {
-  background-image: url('img/map/markers/marker_ilsar_ir.png');
+  background-image: url('img/map/markers/marker_ilsar_9.svg');
   transform: translate(540%, 800%);
 }
 .bold {

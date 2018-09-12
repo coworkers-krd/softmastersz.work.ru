@@ -142,6 +142,30 @@ $main_options = array(
                 ),
             )
         ),
+        array(
+            'id' => 'social',
+            'name' => 'Ссылки на социальные сети',
+            'fields' => array(
+                array(
+                    'id'            => 'vk',
+                    'label'         => 'Вконтакте',
+                    'type'          => 'text', // table of types is above
+                    'placeholder'   => ''
+                ),
+                array(
+                    'id'            => 'insta',
+                    'label'         => 'Instagram',
+                    'type'          => 'text', // table of types is above
+                    'placeholder'   => ''
+                ),
+                array(
+                    'id'            => 'fb',
+                    'label'         => 'Facebook',
+                    'type'          => 'text', // table of types is above
+                    'placeholder'   => ''
+                )
+            )
+        ),
 
 
     )
