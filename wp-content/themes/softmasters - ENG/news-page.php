@@ -7,7 +7,7 @@
 <section class="promo promo--news promo--product">
     <div class="container">
         <div class="promo__text-box">
-            <h1 class="promo__title promo__title--product">новости</h1>
+            <h1 class="promo__title promo__title--product">news</h1>
         </div>
     </div>
 </section>

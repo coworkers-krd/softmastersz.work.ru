@@ -1,8 +1,8 @@
 <section class="info-map">
     <div class="container">
         <div class="info-map__box">
-            <h3>Карта взаимодействия <br>продуктов ILSAR</h3>
-            <p>кликните <span></span> для подробной информации </p>
+            <h3>Map interaction <br>products ILSAR</h3>
+            <p>click <span></span> for more information </p>
         </div>
 
         <div class="info-map__nav">

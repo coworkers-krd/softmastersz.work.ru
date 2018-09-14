@@ -1,7 +1,7 @@
 <section class="objects">
     <div class="container container--top">
         <div class="objects__box">
-            <h3>Карта объектов</h3>
+            <h3>Оbjects map</h3>
         </div>
     </div>
 

@@ -1,6 +1,6 @@
 <section class="partner">
     <div class="container">
-        <h2 class="section-title">Партнеры</h2>
+        <h2 class="section-title">Partners</h2>
 
         <?php
         global $post;

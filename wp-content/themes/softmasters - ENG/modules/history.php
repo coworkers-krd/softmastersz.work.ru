@@ -1,6 +1,6 @@
 <section class="history" id="history">
     <div class="container">
-        <h2 class="section-title">История компании</h2>
+        <h2 class="section-title">Company history</h2>
         <div class="history__box">
             <div class="history__btn history__btn--next"></div>
             <div class="history__btn history__btn--prev"></div>
@@ -22,7 +22,7 @@
                     ?>
 
                     <div class="history__case<?=($items_count==0)? " active":""?>">
-                        <h3 class="history__year"><span class="history__number"><?=$term->name?></span> год</h3>
+                        <h3 class="history__year"><span class="history__number"><?=$term->name?></span> year</h3>
                         <div class="history__content">
                             <ul>
                                 <?php

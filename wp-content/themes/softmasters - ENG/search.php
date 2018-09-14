@@ -5,7 +5,7 @@
     <section class="promo promo--news promo--product">
         <div class="container">
             <div class="promo__text-box">
-                <h1 class="promo__title promo__title--product">Результаты поиска по запросу: <?=get_search_query()?></h1>
+                <h1 class="promo__title promo__title--product">Search results on request: <?=get_search_query()?></h1>
             </div>
         </div>
     </section>
@@ -43,7 +43,7 @@
 
 
             if (!have_posts()){?>
-                <h2>Поиск по запросу "<?=get_search_query()?>" не дал результатов.</h2>
+                <h2>Search on request "<?=get_search_query()?>" gave no results.</h2>
             <?php
             }
             ?>

@@ -2,7 +2,7 @@
     <div class="product__paralax" id="product__paralax"></div>
     <div class="container">
 
-        <h2 class="section-title section-title--white">Наши продукты</h2>
+        <h2 class="section-title section-title--white">Our product</h2>
 
         <?php
         global $post;

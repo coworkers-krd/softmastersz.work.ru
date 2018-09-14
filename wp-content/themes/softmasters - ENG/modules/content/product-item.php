@@ -4,6 +4,6 @@
     <?php } ?>
     <p class="product__text"><b><?php the_title(); ?></b> – <?= get_the_excerpt()?></p>
     <div class="product__btn-wrapper">
-        <a href="<?php the_permalink() ?>" class="product__btn">подробнее</a>
+        <a href="<?php the_permalink() ?>" class="product__btn">detailed</a>
     </div>
 </div>

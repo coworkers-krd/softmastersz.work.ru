@@ -31,10 +31,10 @@
 
                 <div class="page-header__search"></div>
                 <a href="tel:+78123132311" class="page-header__tel">ТЕЛ.: <?= get_option('main_tel')?></a>
-                <!--<div class="page-header__lang">
-                    <a href="#" class="page-header__lang-item page-header__lang-item--active">RU</a>
-                    <a href="#" class="page-header__lang-item">ENG</a>
-                </div>-->
+                <div class="page-header__lang">
+                    <a href="/" class="page-header__lang-item page-header__lang-item--active">RU</a>
+                    <a href="/eng" class="page-header__lang-item">ENG</a>
+                </div>
             </div>
         </nav>
         <div class="main-menu__burger-wrapper">

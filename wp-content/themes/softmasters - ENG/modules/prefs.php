@@ -1,24 +1,24 @@
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
 <section class="prefs" id="about">
     <div class="container">
-        <h2 class="section-title">О  компании</h2>
+        <h2 class="section-title">About company</h2>
 
         <div class="bullit__wrapper">
             <div class="bullit">
                 <div class="bullit__img-wrapper"><img src="<?=get_stylesheet_directory_uri()?>/img/bullit_1.png" alt=""></div>
-                <p class="bullit__text">Работаем  с 2008 г.</p>
+                <p class="bullit__text">We work since 2008.</p>
             </div>
             <div class="bullit">
                 <div class="bullit__img-wrapper"><img src="<?=get_stylesheet_directory_uri()?>/img/bullit_2.png" alt=""></div>
-                <p class="bullit__text">Гарантируем высокий уровень надёжности и безопасности наших систем</p>
+                <p class="bullit__text">We guarantee a high level of reliability and security of our systems</p>
             </div>
             <div class="bullit">
                 <div class="bullit__img-wrapper"><img src="<?=get_stylesheet_directory_uri()?>/img/bullit_3.png" alt=""></div>
-                <p class="bullit__text">Адаптируем наши продукты под любые требования заказчика</p>
+                <p class="bullit__text">We adapt our products to any customer requirements</p>
             </div>
             <div class="bullit">
                 <div class="bullit__img-wrapper"><img src="<?=get_stylesheet_directory_uri()?>/img/bullit_4.png" alt=""></div>
-                <p class="bullit__text">Наши системы позволяют полностью контролировать основные аспекты бизнеса предприятий</p>
+                <p class="bullit__text">Our systems allow you to fully control the main aspects of business enterprises</p>
             </div>
         </div>
 
