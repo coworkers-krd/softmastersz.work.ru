@@ -43,7 +43,7 @@
 
 
             if (!have_posts()){?>
-                <h2>Search on request "<?=get_search_query()?>" gave no results.</h2>
+                <h2 class="news__empty">Search on request "<?=get_search_query()?>" gave no results.</h2>
             <?php
             }
             ?>
