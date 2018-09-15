@@ -1,56 +1,60 @@
 
-	function headerScroll() {
-		var scroll = jQuery(window).scrollTop();
-		if(scroll > 100) {
-			jQuery('.page-header').addClass('scrolled');
-		} if(scroll < 100) { 
-			jQuery('.page-header').removeClass('scrolled');
+function headerScroll() {
+	var scroll = jQuery(window).scrollTop();
+	if(scroll > 100) {
+		jQuery('.page-header').addClass('scrolled');
+	} if(scroll < 100) { 
+		jQuery('.page-header').removeClass('scrolled');
+	}
+}
+jQuery(document).ready(headerScroll);
+jQuery(document).scroll(headerScroll);
+
+function historySlider() {
+	var count = jQuery('.history__case').length;
+	var activeInd = jQuery('.active').index();
+
+	console.log(count);
+
+	jQuery('.history__year').each(function(i){
+		var leftPos = i * 18 + 50 - 18 * activeInd;
+		jQuery(this).css('left',leftPos+ '%');
+	});
+	var j = activeInd;
+	jQuery('.history__btn--next').on('click', function(e){
+		e.preventDefault();
+
+		if(j < (count - 1)) {
+			j = j + 1;
+			var activeInd = jQuery('.active').index();
+			jQuery('.history__case').removeClass('active');
+			jQuery('.history__case').eq(activeInd + 1).addClass('active');
+			jQuery('.history__year').each(function(i){
+				var leftPos = i * 18 + 50 - 18 * (activeInd + 1);
+				jQuery(this).css('left',leftPos+ '%');
+			});
 		}
-	}
-	jQuery(document).ready(headerScroll);
-	jQuery(document).scroll(headerScroll);
+	});
+	jQuery('.history__btn--prev').on('click', function(e){
+		e.preventDefault();
 
-	function historySlider() {
-		var count = jQuery('.history__case').length;
-		var activeInd = jQuery('.active').index();
+		if(j > 0) {
+			j = j - 1; 
+			var activeInd = jQuery('.active').index();
+			jQuery('.history__case').removeClass('active');
+			jQuery('.history__case').eq(activeInd - 1).addClass('active');
+			jQuery('.history__year').each(function(i){
+				var leftPos = i * 18 + 50 - 18 * (activeInd - 1);
+				jQuery(this).css('left',leftPos+ '%');
+			});
+		}		
+	});
+}
+jQuery(document).ready(historySlider);
 
-		console.log(count);
 
-		jQuery('.history__year').each(function(i){
-			var leftPos = i * 18 + 50 - 18 * activeInd;
-			jQuery(this).css('left',leftPos+ '%');
-		});
-		var j = activeInd;
-		jQuery('.history__btn--next').on('click', function(e){
-			e.preventDefault();
-			
-			if(j < (count - 1)) {
-				j = j + 1;
-				var activeInd = jQuery('.active').index();
-				jQuery('.history__case').removeClass('active');
-				jQuery('.history__case').eq(activeInd + 1).addClass('active');
-				jQuery('.history__year').each(function(i){
-					var leftPos = i * 18 + 50 - 18 * (activeInd + 1);
-					jQuery(this).css('left',leftPos+ '%');
-				});
-			}
-		});
-		jQuery('.history__btn--prev').on('click', function(e){
-			e.preventDefault();
 
-			if(j > 0) {
-				j = j - 1; 
-				var activeInd = jQuery('.active').index();
-				jQuery('.history__case').removeClass('active');
-				jQuery('.history__case').eq(activeInd - 1).addClass('active');
-				jQuery('.history__year').each(function(i){
-					var leftPos = i * 18 + 50 - 18 * (activeInd - 1);
-					jQuery(this).css('left',leftPos+ '%');
-				});
-			}		
-		});
-	}
-	jQuery(document).ready(historySlider);
+jQuery(document).ready(function(){
 
 	function mainVideoResize() {
 		var windowsWidth = jQuery(window).width();
@@ -62,11 +66,9 @@
 			jQuery('#mainVideo').css({'width':'auto', 'height':'100%'});
 		}
 	}
+	mainVideoResize();
 	jQuery(window).resize(mainVideoResize);
 	jQuery(document).ready(mainVideoResize);
-
-
-jQuery(document).ready(function(){
 
 	jQuery(function() {
 		jQuery("a[href^='#']").bind('click', function() {
@@ -145,10 +147,14 @@ jQuery(document).ready(function(){
 
 	function productParalax() {
 		var scroll = jQuery(window).scrollTop();
+		var windowsWidth = jQuery(window).width();
 		var product = jQuery('.product').offset().top;
 		var productHeight = jQuery('.product').height();
-		var counter = -((scroll - product) / scroll * 100) - 40;
-		// console.log(counter);
+		// if(windowsWidth < 3000) {
+			var counter = -((scroll - product) / scroll * 100) - windowsWidth / 20;	
+		// }
+		
+		console.log(windowsWidth);
 		jQuery('#product__paralax').css('top',counter + '%');
 	}
 	jQuery(document).ready(productParalax);
