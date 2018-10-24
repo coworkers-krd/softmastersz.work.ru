@@ -25,7 +25,6 @@
 	</footer>
 
 
-	<!--<script src='/js/script.min.js?v=<?php /*echo date(U); */?>'></script>-->
     <?php wp_footer(); ?>
     </body>
     </html>

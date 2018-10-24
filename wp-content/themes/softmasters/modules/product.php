@@ -6,7 +6,7 @@
 
         <?php
         global $post;
-        $args = array( 'numberposts' => -1 ,'post_type' => 'products', 'orderby' => 'date');
+        $args = array( 'numberposts' => -1 ,'post_type' => 'products', 'orderby' => 'date', 'order' => 'ASC');
         $myposts = get_posts( $args );
         foreach( $myposts as $post ){ setup_postdata($post);
 

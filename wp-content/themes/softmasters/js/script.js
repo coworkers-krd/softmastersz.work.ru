@@ -14,8 +14,6 @@ function historySlider() {
 	var count = jQuery('.history__case').length;
 	var activeInd = jQuery('.active').index();
 
-	console.log(count);
-
 	jQuery('.history__year').each(function(i){
 		var leftPos = i * 18 + 50 - 18 * activeInd;
 		jQuery(this).css('left',leftPos+ '%');
@@ -146,16 +144,15 @@ jQuery(document).ready(function(){
 	jQuery('#imapRussiaWrapper').draggable();
 
 	function productParalax() {
-		var scroll = jQuery(window).scrollTop();
-		var windowsWidth = jQuery(window).width();
-		var product = jQuery('.product').offset().top;
-		var productHeight = jQuery('.product').height();
-		// if(windowsWidth < 3000) {
-			var counter = -((scroll - product) / scroll * 100) - windowsWidth / 20;	
-		// }
-		
-		console.log(windowsWidth);
-		jQuery('#product__paralax').css('top',counter + '%');
+		if(jQuery('body').hasClass('page-template-default')) {
+			var scroll = jQuery(window).scrollTop();
+			var windowsWidth = jQuery(window).width();
+			var product = jQuery('.product').offset().top - jQuery('.product').height();
+
+			var delta = (product - scroll) / (50);
+
+			jQuery('#product__paralax').css('top',delta - 40 + '%');
+		}
 	}
 	jQuery(document).ready(productParalax);
 	jQuery(document).scroll(productParalax);
@@ -197,25 +194,50 @@ jQuery(document).ready(function(){
 	jQuery(window).resize(menuHideShow);
 
 
-	ymaps.ready(initMap);
-	function initMap(){ 
-		var myMap = new ymaps.Map("contactMap", {            
-			center: [59.387921, 28.611306],            
-			zoom: 16,
-		});
+	if(jQuery('body').hasClass('page-template-contacts-page')) {
+		ymaps.ready(initMap);
+		function initMap(){ 
+			var myMap = new ymaps.Map("contactMap", {            
+				center: [59.387921, 28.611306],            
+				zoom: 16,
+			});
 
-		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-			hintContent: 'Юридический и физический адреса',
-			balloonContent: 'Юридический и физический адреса',
-		}, {
-			iconLayout: 'default#image', 
-			iconImageHref: 'http://sydphoep.beget.tech/wp-content/themes/softmasters/img/map/geo-tag.gif',
-			iconImageSize: [45, 65],
-			iconImageOffset: [-20, -55]
-		}),
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+				hintContent: 'Юридический и физический адреса',
+				balloonContent: 'Юридический и физический адреса',
+			}, {
+				iconLayout: 'default#image', 
+				iconImageHref: 'http://sydphoep.beget.tech/wp-content/themes/softmasters/img/map/geo-tag.gif',
+				iconImageSize: [45, 65],
+				iconImageOffset: [-20, -55]
+			}),
 
-		myMap.behaviors.disable('scrollZoom');
-		myMap.geoObjects.add(myPlacemark)
+			myMap.behaviors.disable('scrollZoom');
+			myMap.geoObjects.add(myPlacemark)
+		}
 	}
+
+
+	jQuery('.filter_item').on('click',function(){
+		jQuery(this).toggleClass('js-active-filter');
+		getFilter();
+	});
+
+	function getFilter() {
+		var arrActive = [];
+		jQuery('.js-active-filter').each(function(){
+			arrActive.push(jQuery(this).attr('data-type'));
+		});
+		jQuery('.objects__marker').fadeOut(50);
+		for (i = 0; i < arrActive.length; i++) {
+			console.log( arrActive[i] );
+			jQuery('.' + arrActive[i]).fadeIn(50);
+		}
+	}
+	getFilter();
+
+	jQuery('.js-get-presentation').on('click', function(e) {
+		e.preventDefault();
+	});
 
 });

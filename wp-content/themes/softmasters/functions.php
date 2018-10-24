@@ -218,6 +218,13 @@ $metabox = array(
             'label' => 'Description',
             'type'	=> 'textarea',
         ),
+        /* simple text input */
+        array(
+            'id'    => 'content',
+            'label' => 'Заполнен? {yes/no}',
+            'default' => 'no',
+            'type'  => 'text',
+        ),
 
     )
 
