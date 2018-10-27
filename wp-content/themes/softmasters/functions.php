@@ -211,12 +211,17 @@ $metabox = array(
             'label' => 'Keywords',
             'type'	=> 'text',
         ),
-
         /* simple text input */
         array(
             'id'	=> 'desc',
             'label' => 'Description',
             'type'	=> 'textarea',
+        ),
+        /* simple text input */
+        array(
+            'id'    => 'img',
+            'label' => 'Верхнее фоновое изображение',
+            'type'  => 'file',
         ),
         /* simple text input */
         array(

@@ -3764,7 +3764,7 @@ a.ui-button:active,
   top: 6px;
 }
 
-.content__block, .wp-block-columns {
+.content__block, .wp-block-columns, .single_image {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -3778,7 +3778,7 @@ a.ui-button:active,
 .wp-block-separator {
   display: none;
 }
-.content__block:after, .wp-block-columns:after {
+.content__block:after, .wp-block-columns:after, .single_image:after {
   content: '';
   display: inline-block;
   width: 100%;
@@ -3852,11 +3852,28 @@ a.ui-button:active,
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .wp-block-image img {
   max-width: 100vw !important;
   width: 100vw;
+}
+.single_image {
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+}
+.single_image img {
+  width: auto !important;
 }
 .has-2-columns img {
   width: 100% !important;
@@ -4587,3 +4604,72 @@ a.ui-button:active,
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.modal {
+  display: none;
+  width: 40%;
+  height: auto;
+  position: fixed;
+  padding: 5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #fff;
+  text-align: center;
+  z-index: 9999;
+  border-radius: 15px;
+  box-shadow: 0px 0px 14.4px 1.6px rgba(43, 28, 112, 0.43);
+}
+.modal p {
+  color: rgb(38, 24, 97);
+  font-size: 20px;
+  line-height: 2;
+  text-align: center;
+  font-family: "Open Sans";
+}
+.modal a {
+  color: #00a4f1;
+  text-decoration: none;
+}
+.modal_close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.modal_close:before, .modal_close:after {
+  content: '';
+  display: inline-block;
+  height: 35px;
+  width: 2px;
+  background-color: #261861;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.modal_close:before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.modal_close:after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.modal_bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-color: #261861;
+  opacity: 0.78;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+}

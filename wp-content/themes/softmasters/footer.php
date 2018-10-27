@@ -24,6 +24,12 @@
 		</div>
 	</footer>
 
+	<div class="modal_bg"></div>
+	<div class="modal">
+		<p>Презентацию по продукту вы можете получить, направив запрос на наш электронный адрес <a href="mailto:init@soft-masters.ru">init@soft-masters.ru</a></p>
+		<span class="modal_close"></span>
+	</div>
+
 
     <?php wp_footer(); ?>
     </body>

@@ -240,4 +240,18 @@ jQuery(document).ready(function(){
 		e.preventDefault();
 	});
 
+	jQuery('.js-get-presentation').on('click',function(e){
+		e.preventDefault();
+		jQuery('.modal').fadeIn(200);
+		jQuery('.modal_bg').fadeIn(200);
+	});
+	jQuery('.modal_bg').on('click',function(){
+		jQuery('.modal').fadeOut(200);
+		jQuery('.modal_bg').fadeOut(200);
+	});
+	jQuery('.modal_close').on('click',function(){
+		jQuery('.modal').fadeOut(200);
+		jQuery('.modal_bg').fadeOut(200);
+	});
+
 });

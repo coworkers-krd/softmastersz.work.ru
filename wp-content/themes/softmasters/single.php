@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="promo promo--ilsar-ship promo--product">
+<section class="promo promo--ilsar-ship promo--product" style="background-image: url(<?php echo get_post_meta( get_the_id(), 'meta_img', true)?>)">
     <div class="container">
         <div class="promo__text-box">
             <h1 class="promo__title promo__title--product"><?php the_title(); ?></h1>
@@ -34,7 +34,9 @@
             $myposts = get_posts( $args );
             foreach( $myposts as $post ){ setup_postdata($post);
                 if($post->ID != $product_id){
-                    get_template_part("modules/content/product-item-light");
+                    if(get_post_meta( get_the_id(), 'meta_content', true) == 'yes') {
+                        get_template_part("modules/content/product-item-light");
+                    }
                 }
             }
             wp_reset_postdata();
